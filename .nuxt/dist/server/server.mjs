@@ -1,1 +1,0 @@
-export { default } from "file:///C:/institut-kamole-nuxt/node_modules/@nuxt/vite-builder/dist/vite-node-entry.mjs"
