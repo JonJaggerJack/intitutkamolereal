@@ -1047,8 +1047,6 @@ const options = [
     font-size: 0.8rem;
     padding: 0.7rem;
   }
-    font-size: 1.5rem;
-  }
 
   .history-card {
     padding: 1.5rem;
