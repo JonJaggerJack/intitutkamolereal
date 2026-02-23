@@ -2,19 +2,28 @@
   <header class="header">
     <div class="container header-container">
       <div class="logo">
-        <span class="logo-emoji">🎓</span>
-        <NuxtLink to="/" class="logo-text">Institut Kamole</NuxtLink>
+        <!-- Le logo sera ici - placez logo.png dans public/images/logos/ -->
+        <NuxtLink to="/" class="logo-link">
+          <img 
+            v-if="logoExists" 
+            src="/images/logos/logo.png" 
+            alt="Institut Kamole Logo" 
+            class="logo-image"
+          >
+          <span v-else class="logo-emoji">🎓</span>
+          <span class="logo-text">Institut Kamole</span>
+        </NuxtLink>
       </div>
       
       <nav class="navbar">
         <ul class="nav-menu">
-          <li><NuxtLink to="/" class="nav-link active">Accueil</NuxtLink></li>
-          <li><NuxtLink to="/about" class="nav-link">À propos</NuxtLink></li>
-          <li><NuxtLink to="/faculty" class="nav-link">Faculté</NuxtLink></li>
-          <li><NuxtLink to="/staff" class="nav-link">Personnel</NuxtLink></li>
-          <li><NuxtLink to="/events" class="nav-link">Événements</NuxtLink></li>
-          <li><NuxtLink to="/campus-life" class="nav-link">Campus</NuxtLink></li>
-          <li><NuxtLink to="/contact" class="nav-link">Contact</NuxtLink></li>
+          <li><NuxtLink to="/" class="nav-link" exact-active-class="active">Accueil</NuxtLink></li>
+          <li><NuxtLink to="/about" class="nav-link" exact-active-class="active">À propos</NuxtLink></li>
+          <li><NuxtLink to="/faculty" class="nav-link" exact-active-class="active">Faculté</NuxtLink></li>
+          <li><NuxtLink to="/staff" class="nav-link" exact-active-class="active">Personnel</NuxtLink></li>
+          <li><NuxtLink to="/events" class="nav-link" exact-active-class="active">Événements</NuxtLink></li>
+          <li><NuxtLink to="/campus-life" class="nav-link" exact-active-class="active">Campus</NuxtLink></li>
+          <li><NuxtLink to="/contact" class="nav-link" exact-active-class="active">Contact</NuxtLink></li>
         </ul>
       </nav>
 
@@ -28,13 +37,13 @@
     <!-- Mobile menu -->
     <nav v-if="isMenu" class="mobile-menu">
       <ul>
-        <li><NuxtLink to="/">Accueil</NuxtLink></li>
-        <li><NuxtLink to="/about">À propos</NuxtLink></li>
-        <li><NuxtLink to="/faculty">Faculté</NuxtLink></li>
-        <li><NuxtLink to="/staff">Personnel</NuxtLink></li>
-        <li><NuxtLink to="/events">Événements</NuxtLink></li>
-        <li><NuxtLink to="/campus-life">Campus</NuxtLink></li>
-        <li><NuxtLink to="/contact">Contact</NuxtLink></li>
+        <li><NuxtLink to="/" exact-active-class="active">Accueil</NuxtLink></li>
+        <li><NuxtLink to="/about" exact-active-class="active">À propos</NuxtLink></li>
+        <li><NuxtLink to="/faculty" exact-active-class="active">Faculté</NuxtLink></li>
+        <li><NuxtLink to="/staff" exact-active-class="active">Personnel</NuxtLink></li>
+        <li><NuxtLink to="/events" exact-active-class="active">Événements</NuxtLink></li>
+        <li><NuxtLink to="/campus-life" exact-active-class="active">Campus</NuxtLink></li>
+        <li><NuxtLink to="/contact" exact-active-class="active">Contact</NuxtLink></li>
       </ul>
     </nav>
   </header>
@@ -42,6 +51,19 @@
 
 <script setup lang="ts">
 const isMenu = ref(false)
+const logoExists = ref(false)
+
+// Vérifier si le logo existe au montage du composant
+onMounted(() => {
+  const img = new Image()
+  img.onload = () => {
+    logoExists.value = true
+  }
+  img.onerror = () => {
+    logoExists.value = false
+  }
+  img.src = '/images/logos/logo.png'
+})
 
 watch(() => useRoute().path, () => {
   isMenu.value = false
@@ -70,9 +92,24 @@ watch(() => useRoute().path, () => {
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-weight: bold;
-  color: var(--primary);
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.logo-link:hover {
+  opacity: 0.85;
+}
+
+.logo-image {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
 }
 
 .logo-emoji {
@@ -83,7 +120,6 @@ watch(() => useRoute().path, () => {
   font-size: 1.3rem;
   font-weight: 700;
   color: var(--primary);
-  text-decoration: none;
 }
 
 .navbar {
@@ -172,6 +208,16 @@ watch(() => useRoute().path, () => {
   text-decoration: none;
   color: var(--primary);
   font-weight: 500;
+  transition: color 0.3s;
+}
+
+.mobile-menu a.active {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.mobile-menu a:hover {
+  color: var(--accent);
 }
 
 @media (max-width: 768px) {
@@ -181,6 +227,10 @@ watch(() => useRoute().path, () => {
 
   .header-container {
     height: 60px;
+  }
+
+  .logo-image {
+    height: 38px;
   }
 
   .logo-text {
@@ -216,6 +266,10 @@ watch(() => useRoute().path, () => {
 @media (max-width: 480px) {
   .header-container {
     height: 55px;
+  }
+
+  .logo-image {
+    height: 35px;
   }
 
   .logo-text {
