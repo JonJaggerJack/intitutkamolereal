@@ -260,7 +260,7 @@ const leaders = [
   { period: '1977-1978', name: 'KUSINZ KULIMUSHI MEDARD', role: 'Préfet', type: 'laic' },
   { period: '1978-1980', name: 'MUFUNGIZI MIGABO Xavier', role: 'Préfet', type: 'laic' },
   { period: '1980-1983', name: 'BUHENDWA NYANTANGA Dénis', role: 'Préfet', type: 'laic' },
-  { period: '12-20 Sept 1983', name: 'MITIMA MPANANO René', role: 'Préfet', type: 'laic' },
+  { period: '12-20 Sept 1983', name: 'MITIMA MPANANO Rémy', role: 'Préfet', type: 'laic' },
   { period: '1983-1985', name: 'MARHEGANE BISHANVU Pascal', role: 'Préfet', type: 'laic' },
   { period: '1985-Oct 1986', name: 'BIRINGANINE KALENDE Maurice', role: 'Préfet', type: 'laic' },
   { period: 'Oct 1986-1987', name: 'MIGABO NYAMUGUKA KANGE Emmanuel', role: 'Préfet', type: 'laic' },
