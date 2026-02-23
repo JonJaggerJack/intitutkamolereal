@@ -2,15 +2,13 @@
   <header class="header">
     <div class="container header-container">
       <div class="logo">
-        <!-- Le logo sera ici - placez logo.png dans public/images/logos/ -->
+        <!-- Le logo sera ici - remplacez logo.svg par votre logo.png dans public/images/logos/ -->
         <NuxtLink to="/" class="logo-link">
           <img 
-            v-if="logoExists" 
-            src="/images/logos/logo.png" 
+            src="/images/logos/logo.svg" 
             alt="Institut Kamole Logo" 
             class="logo-image"
           >
-          <span v-else class="logo-emoji">🎓</span>
           <span class="logo-text">Institut Kamole</span>
         </NuxtLink>
       </div>
@@ -51,19 +49,6 @@
 
 <script setup lang="ts">
 const isMenu = ref(false)
-const logoExists = ref(false)
-
-// Vérifier si le logo existe au montage du composant
-onMounted(() => {
-  const img = new Image()
-  img.onload = () => {
-    logoExists.value = true
-  }
-  img.onerror = () => {
-    logoExists.value = false
-  }
-  img.src = '/images/logos/logo.png'
-})
 
 watch(() => useRoute().path, () => {
   isMenu.value = false
