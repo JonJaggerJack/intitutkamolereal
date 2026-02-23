@@ -4,11 +4,10 @@
     <Hero 
       title="Façonnons l'Avenir des Meilleurs Élèves"
       subtitle="Collège prestigieux offrant une éducation d'excellence combinée à un cadre de vie stimulant. Développez vos talents académiques et personnels depuis 1952."
-      badge="🌟 Excellence Académique depuis 1952"
-      background-image="https://images.unsplash.com/photo-1427504494785-cdea0d66d310?w=1200&q=80"
+      badge="Excellence Académique depuis 1952"
     >
       <template #buttons>
-        <NuxtLink to="/contact" class="btn btn-primary">📝 Demander une Admission</NuxtLink>
+        <NuxtLink to="/contact" class="btn btn-primary">Demander une Admission</NuxtLink>
         <a href="#programs" class="btn btn-secondary">En Savoir Plus ↓</a>
       </template>
     </Hero>
@@ -30,15 +29,18 @@
             
             <div class="about-highlights">
               <div class="highlight">
-                <h4>🎓 Éducation Holistique</h4>
+                <Icon name="graduation" size="large" color="var(--primary)" />
+                <h4>Éducation Holistique</h4>
                 <p>Nous développons l'esprit critique, la créativité et le leadership.</p>
               </div>
               <div class="highlight">
-                <h4>🌍 Perspective Globale</h4>
+                <Icon name="globe" size="large" color="var(--primary)" />
+                <h4>Perspective Globale</h4>
                 <p>Programmes alignés aux normes internationales pour une meilleure insertion.</p>
               </div>
               <div class="highlight">
-                <h4>💪 Encadrement Personnel</h4>
+                <Icon name="users" size="large" color="var(--primary)" />
+                <h4>Encadrement Personnel</h4>
                 <p>Suivi individualisé pour chaque élève et sa trajectoire académique.</p>
               </div>
             </div>
@@ -47,7 +49,11 @@
           </div>
 
           <div class="about-image">
-            <img src="https://images.unsplash.com/photo-1509909756405-479006a77f0f?w=800&q=80" alt="Institut Kamole">
+            <!-- Placez votre image dans /public/images/about-school.jpg -->
+            <div class="image-placeholder">
+              <Icon name="graduation" size="xlarge" color="var(--accent)" />
+              <p>Ajoutez votre image: /public/images/about-school.jpg</p>
+            </div>
           </div>
         </div>
       </div>
@@ -68,11 +74,14 @@
             :key="program.id"
             class="program-card"
           >
-            <div class="program-icon">{{ program.icon }}</div>
+            <Icon :name="program.icon" size="xlarge" color="var(--primary)" class="program-icon" />
             <h3>{{ program.title }}</h3>
             <p>{{ program.description }}</p>
             <ul class="program-list">
-              <li v-for="item in program.items" :key="item">✓ {{ item }}</li>
+              <li v-for="item in program.items" :key="item">
+                <Icon name="check" size="small" color="var(--accent)" />
+                {{ item }}
+              </li>
             </ul>
           </div>
         </div>
@@ -167,8 +176,8 @@
         <h2>Prêt à Rejoindre Institut Kamole?</h2>
         <p>Rejoignez une communauté d'excellence où chaque élève est valorisé et accompagné vers la réussite</p>
         <div class="cta-buttons">
-          <NuxtLink to="/contact" class="btn btn-cta-primary">📝 Demander Une Admission</NuxtLink>
-          <NuxtLink to="/contact" class="btn btn-cta-secondary">💬 Nous Contacter</NuxtLink>
+          <NuxtLink to="/contact" class="btn btn-cta-primary">Demander Une Admission</NuxtLink>
+          <NuxtLink to="/contact" class="btn btn-cta-secondary">Nous Contacter</NuxtLink>
         </div>
       </div>
     </section>
@@ -179,42 +188,42 @@
 const programs = [
   {
     id: 1,
-    icon: '📚',
+    icon: 'book',
     title: 'Lettres & Humanités',
     description: 'Littérature, philosophie, histoire pour former les penseurs critiques.',
     items: ['Littérature Française', 'Philosophie', 'Histoire & Géographie', 'Langues Étrangères']
   },
   {
     id: 2,
-    icon: '🔬',
+    icon: 'lightbulb',
     title: 'Sciences Exactes',
     description: 'Mathématiques, physique et chimie pour les futurs scientifiques.',
     items: ['Mathématiques', 'Physique', 'Chimie', 'Biologie']
   },
   {
     id: 3,
-    icon: '⚙️',
+    icon: 'target',
     title: 'Ingénierie & Tech',
     description: 'Informatique et technologie pour les innovateurs numériques.',
     items: ['Informatique', 'Programmation', 'Robotique', 'Électronique']
   },
   {
     id: 4,
-    icon: '💼',
+    icon: 'award',
     title: 'Commerce & Gestion',
     description: 'Économie et gestion pour les futurs leaders entrepreneuriaux.',
     items: ['Économie', 'Gestion d\'Entreprise', 'Comptabilité', 'Gestion Financière']
   },
   {
     id: 5,
-    icon: '⚕️',
+    icon: 'heart',
     title: 'Santé & Sciences',
     description: 'Médecine et sciences de la santé pour les futurs professionnels.',
     items: ['Biologie Médicale', 'Chimie de Santé', 'Santé Publique', 'Génétique']
   },
   {
     id: 6,
-    icon: '🌍',
+    icon: 'globe',
     title: 'Environnement & Durable',
     description: 'Durabilité et écologie pour habitants responsables de la planète.',
     items: ['Écologie', 'Développement Durable', 'Agronomie', 'Gestion Environnementale']
@@ -288,6 +297,9 @@ const testimonials = [
 .highlight {
   padding-bottom: 1.5rem;
   border-bottom: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
 }
 
 .highlight h4 {
@@ -305,6 +317,24 @@ const testimonials = [
 .about-image img {
   border-radius: 12px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.image-placeholder {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 12px;
+  padding: 4rem 2rem;
+  text-align: center;
+  border: 2px dashed #dee2e6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.image-placeholder p {
+  color: var(--text);
+  font-size: 0.9rem;
+  margin: 0;
 }
 
 .programs-section {
@@ -392,6 +422,7 @@ const testimonials = [
   margin-bottom: 0.7rem;
   display: flex;
   align-items: center;
+  gap: 0.7rem;
   color: rgba(255, 255, 255, 0.85);
 }
 
