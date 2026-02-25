@@ -92,84 +92,6 @@
       </div>
     </section>
 
-    <!-- Carousel Section - Actualités -->
-    <Carousel 
-      title="Actualités & Événements"
-      badge="📢 Dernières Nouvelles"
-      :showDots="true"
-      :showTitle="true"
-    >
-      <div class="carousel-item">
-        <div class="carousel-card">
-          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400&q=80" alt="Événement 1">
-          <div class="carousel-card-content">
-            <span class="carousel-date">15 Feb 2026</span>
-            <h4>Cérémonie d'Excellence Académique</h4>
-            <p>Célébration des meilleur étudiants de l'année avec remise de prix et honneurs.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="carousel-item">
-        <div class="carousel-card">
-          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&q=80" alt="Événement 2">
-          <div class="carousel-card-content">
-            <span class="carousel-date">10 Feb 2026</span>
-            <h4>Journée Portes Ouvertes</h4>
-            <p>Visitez nos installations et rencontrez notre équipe pédagogique exceptionnelle.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="carousel-item">
-        <div class="carousel-card">
-          <img src="https://images.unsplash.com/photo-1511379938547-c1f69b13d835?w=400&q=80" alt="Événement 3">
-          <div class="carousel-card-content">
-            <span class="carousel-date">05 Feb 2026</span>
-            <h4>Atelier Entrepreneuriat</h4>
-            <p>Formation pratique en création d'entreprise et développement du leadership.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="carousel-item">
-        <div class="carousel-card">
-          <img src="https://images.unsplash.com/photo-1543269865-cbdf26ce6c5e?w=400&q=80" alt="Événement 4">
-          <div class="carousel-card-content">
-            <span class="carousel-date">01 Feb 2026</span>
-            <h4>Compétition Scientifique</h4>
-            <p>Les étudiants présentent leurs projets de recherche innovants.</p>
-          </div>
-        </div>
-      </div>
-    </Carousel>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials-section">
-      <div class="container">
-        <div class="section-header text-center">
-          <span class="badge">Retours de nos Familles</span>
-          <h2>Ce que Disent Nos Étudiants</h2>
-        </div>
-
-        <div class="testimonials-grid">
-          <div v-for="(testimonial, index) in testimonials" :key="index" class="testimonial-card">
-            <div class="testimonial-stars">
-              <span v-for="i in 5" :key="i">★</span>
-            </div>
-            <p class="testimonial-text">{{ testimonial.text }}</p>
-            <div class="testimonial-author">
-              <div class="author-avatar">{{ testimonial.initials }}</div>
-              <div>
-                <h4>{{ testimonial.name }}</h4>
-                <p>{{ testimonial.role }}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- CTA Section -->
     <section class="cta-section">
       <div class="container">
@@ -230,26 +152,6 @@ const programs = [
   }
 ]
 
-const testimonials = [
-  {
-    text: 'Institut Kamole a transformé mon parcours académique. Les enseignants sont passionnés et véritablement à l\'écoute.',
-    name: 'Marc Jean',
-    role: 'Élève - Classe de Terminale',
-    initials: 'MJ'
-  },
-  {
-    text: 'L\'internat m\'a permis de me concentrer sur mes études. L\'environnement est sain, sécurisé et stimulant.',
-    name: 'Sandra Antoine',
-    role: 'Élève - Classe de 2nde',
-    initials: 'SA'
-  },
-  {
-    text: 'Mes enfants adorent venir à Institut Kamole. La qualité pédagogique est exceptionnelle et nous voyons de vrais progrès.',
-    name: 'Pierre Mathurin',
-    role: 'Parent',
-    initials: 'PM'
-  }
-]
 </script>
 
 <style scoped>
@@ -424,77 +326,6 @@ const testimonials = [
   align-items: center;
   gap: 0.7rem;
   color: rgba(255, 255, 255, 0.85);
-}
-
-.testimonials-section {
-  padding: 9em 0;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e8edf5 100%);
-}
-
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2.5rem;
-}
-
-.testimonial-card {
-  background: white;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-}
-
-.testimonial-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
-}
-
-.testimonial-stars {
-  display: flex;
-  gap: 0.3rem;
-  margin-bottom: 1rem;
-  color: var(--accent);
-}
-
-.testimonial-text {
-  color: var(--text);
-  line-height: 1.7;
-  margin: 1rem 0;
-  font-style: italic;
-}
-
-.testimonial-author {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 1.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid #eee;
-}
-
-.author-avatar {
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(135deg, var(--accent), var(--primary));
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: 700;
-}
-
-.testimonial-author h4 {
-  color: var(--primary);
-  margin: 0;
-  font-weight: 600;
-}
-
-.testimonial-author p {
-  color: var(--text);
-  font-size: 0.85rem;
-  margin: 0;
 }
 
 .cta-section {
