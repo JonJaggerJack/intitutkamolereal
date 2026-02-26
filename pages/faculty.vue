@@ -3,7 +3,7 @@
     <Hero 
       title="Nos Facultés & Programmes"
       subtitle="Explorez nos formations académiques professionnelles et modernes"
-      badge="📚 Formations Académiques"
+      badge="Formations Académiques"
     >
       <template #buttons>
         <NuxtLink to="/contact" class="btn btn-primary">Demande d'Admission</NuxtLink>

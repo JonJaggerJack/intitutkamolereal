@@ -3,7 +3,7 @@
     <Hero 
       title="À Propos de nous"
       subtitle="Découvrez l'histoire, la mission et les valeurs qui font de Institut Kamole un leader en éducation depuis 1952."
-      badge="🏫 Notre Histoire"
+      badge="Notre Histoire"
     >
       <template #buttons>
         <NuxtLink to="/contact" class="btn btn-primary">Nous Contacter</NuxtLink>

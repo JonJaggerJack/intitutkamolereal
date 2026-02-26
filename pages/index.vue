@@ -29,17 +29,14 @@
             
             <div class="about-highlights">
               <div class="highlight">
-                <Icon name="graduation" size="large" color="var(--primary)" />
                 <h4>Éducation Holistique</h4>
                 <p>Nous développons l'esprit critique, la créativité et le leadership.</p>
               </div>
               <div class="highlight">
-                <Icon name="globe" size="large" color="var(--primary)" />
                 <h4>Perspective Globale</h4>
                 <p>Programmes alignés aux normes internationales pour une meilleure insertion.</p>
               </div>
               <div class="highlight">
-                <Icon name="users" size="large" color="var(--primary)" />
                 <h4>Encadrement Personnel</h4>
                 <p>Suivi individualisé pour chaque élève et sa trajectoire académique.</p>
               </div>
@@ -51,7 +48,6 @@
           <div class="about-image">
             <!-- Placez votre image dans /public/images/about-school.jpg -->
             <div class="image-placeholder">
-              <Icon name="graduation" size="xlarge" color="var(--accent)" />
               <p>Ajoutez votre image: /public/images/about-school.jpg</p>
             </div>
           </div>
@@ -74,7 +70,7 @@
             :key="program.id"
             class="program-card"
           >
-            <Icon :name="program.icon" size="xlarge" color="var(--primary)" class="program-icon" />
+            <Icon :name="program.icon" size="xlarge" color="white" class="program-icon" />
             <h3>{{ program.title }}</h3>
             <p>{{ program.description }}</p>
             <ul class="program-list">
@@ -123,13 +119,6 @@ const programs = [
     items: ['Mathématiques', 'Physique', 'Chimie', 'Biologie']
   },
   {
-    id: 3,
-    icon: 'target',
-    title: 'Ingénierie & Tech',
-    description: 'Informatique et technologie pour les innovateurs numériques.',
-    items: ['Informatique', 'Programmation', 'Robotique', 'Électronique']
-  },
-  {
     id: 4,
     icon: 'award',
     title: 'Commerce & Gestion',
@@ -142,13 +131,6 @@ const programs = [
     title: 'Santé & Sciences',
     description: 'Médecine et sciences de la santé pour les futurs professionnels.',
     items: ['Biologie Médicale', 'Chimie de Santé', 'Santé Publique', 'Génétique']
-  },
-  {
-    id: 6,
-    icon: 'globe',
-    title: 'Environnement & Durable',
-    description: 'Durabilité et écologie pour habitants responsables de la planète.',
-    items: ['Écologie', 'Développement Durable', 'Agronomie', 'Gestion Environnementale']
   }
 ]
 
@@ -274,7 +256,7 @@ const programs = [
 
 .programs-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   margin-bottom: 3rem;
 }
@@ -286,19 +268,19 @@ const programs = [
   border-radius: 16px;
   padding: 2.5rem;
   color: white;
-  transition: all 0.4s ease;
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .program-card:hover {
-  transform: translateY(-12px);
+  transform: translateY(-8px);
   background: rgba(251, 193, 2, 0.2);
   border-color: var(--accent);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 .program-icon {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 
 .program-card h3 {
@@ -330,20 +312,21 @@ const programs = [
 
 .cta-section {
   padding: 8em 0;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  background: #ffffff;
   text-align: center;
   position: relative;
   overflow: hidden;
+  border-top: 1px solid #e9ecef;
 }
 
 .cta-section h2 {
   font-size: 2.8rem;
-  color: white;
+  color: var(--primary);
   margin-bottom: 1rem;
 }
 
 .cta-section p {
-  color: rgba(255, 255, 255, 0.95);
+  color: #555f6e;
   font-size: 1.2rem;
   margin-bottom: 2.5rem;
   max-width: 700px;
@@ -401,6 +384,7 @@ const programs = [
 
 .btn-large:hover {
   background: var(--accent);
+  color: var(--primary);
   transform: scale(1.05);
 }
 
@@ -412,18 +396,20 @@ const programs = [
 
 .btn-cta-primary:hover {
   background: white;
+  color: var(--primary);
+  border: 2px solid var(--primary);
   transform: scale(1.05);
 }
 
 .btn-cta-secondary {
   background: transparent;
-  color: white;
-  border: 2px solid white;
+  color: var(--primary);
+  border: 2px solid var(--primary);
 }
 
 .btn-cta-secondary:hover {
-  background: white;
-  color: var(--primary);
+  background: var(--primary);
+  color: white;
   transform: scale(1.05);
 }
 
@@ -522,16 +508,12 @@ const programs = [
   }
 
   .programs-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
 
   .program-card {
     padding: 1.5rem;
-  }
-
-  .program-icon {
-    font-size: 2.5rem;
   }
 
   .cta-section h2 {
@@ -542,10 +524,6 @@ const programs = [
     flex-direction: column;
     gap: 1rem;
   }
-
-  .carousel-card img {
-    height: 180px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -553,6 +531,10 @@ const programs = [
   .programs-section,
   .cta-section {
     padding: 2.5rem 0;
+  }
+
+  .programs-grid {
+    grid-template-columns: 1fr;
   }
 
   .badge {

@@ -1,10 +1,6 @@
 <template>
   <section class="hero" :style="heroStyle">
     <div class="hero-overlay"></div>
-    <div class="hero-shapes">
-      <div class="shape shape-1"></div>
-      <div class="shape shape-2"></div>
-    </div>
     <div class="container hero-content">
       <div class="hero-text">
         <span class="hero-badge">{{ badge }}</span>
@@ -57,33 +53,19 @@ const heroStyle = computed(() => ({
 }
 
 .hero-shapes {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 1;
+  display: none;
 }
 
 .shape {
-  position: absolute;
-  border-radius: 50%;
-  opacity: 0.1;
+  display: none;
 }
 
 .shape-1 {
-  top: -50%;
-  left: -10%;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(251, 193, 2, 0.1) 0%, transparent 70%);
+  display: none;
 }
 
 .shape-2 {
-  bottom: -30%;
-  right: -5%;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(251, 193, 2, 0.05) 0%, transparent 70%);
+  display: none;
 }
 
 .hero-content {

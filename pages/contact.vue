@@ -3,7 +3,7 @@
     <Hero 
       title="Nous Contacter"
       subtitle="Avez des questions? Nous serions heureux de vous entendre. Contactez-nous dès aujourd'hui!"
-      badge="📞 Envoyez-nous un Message"
+      badge="Envoyez-nous un Message"
     >
       <template #buttons>
         <a href="#contact-form" class="btn btn-primary">Remplir le Formulaire</a>

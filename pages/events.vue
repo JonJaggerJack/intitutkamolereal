@@ -3,7 +3,7 @@
     <Hero 
       title="Événements & Actualités"
       subtitle="Restez informés de nos activités, célébrations et moments importants"
-      badge="📅 Nos Événements"
+      badge="Nos Événements"
     >
       <template #buttons>
         <NuxtLink to="/contact" class="btn btn-primary">S'inscrire à un Événement</NuxtLink>

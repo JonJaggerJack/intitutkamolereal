@@ -3,7 +3,7 @@
     <Hero 
       title="Notre Personnel"
       subtitle="Rencontrez l'équipe dévouée qui fait la différence à Institut Kamole"
-      badge="👥 Notre Équipe"
+      badge="Notre Équipe"
     >
       <template #buttons>
         <NuxtLink to="/contact" class="btn btn-primary">Rejoignez Notre Équipe</NuxtLink>

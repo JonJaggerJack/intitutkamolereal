@@ -16,7 +16,7 @@
           @mouseleave="hoveredIndex = -1"
           :class="{ hovered: hoveredIndex === index }"
         >
-          <div class="feature-icon">{{ feature.icon }}</div>
+          <div class="feature-icon"><Icon :name="feature.icon" size="large" color="var(--secondary)" /></div>
           <h3>{{ feature.title }}</h3>
           <p>{{ feature.description }}</p>
         </div>
@@ -43,32 +43,32 @@ const props = withDefaults(defineProps<Props>(), {
   badge: 'Avantages Uniques',
   features: () => [
     {
-      icon: '🏆',
+      icon: 'trophy',
       title: 'Excellence Académique',
       description: 'Programmes pédagogiques modernes alignés sur les normes internationales.'
     },
     {
-      icon: '🏠',
+      icon: 'star',
       title: 'Internat Moderne',
       description: 'Chambres spacieuses, confortables et équipées.'
     },
     {
-      icon: '⚽',
+      icon: 'target',
       title: 'Sports & Culture',
       description: 'Plus de 15 activités parascolaires pour développer vos passions.'
     },
     {
-      icon: '👨‍🏫',
+      icon: 'users',
       title: 'Équipe Dévouée',
       description: 'Enseignants qualifiés et disponibles pour un suivi personnalisé.'
     },
     {
-      icon: '💻',
+      icon: 'lightbulb',
       title: 'Technologie',
       description: 'Salles informatiques modernes et WiFi haut débit partout.'
     },
     {
-      icon: '🚀',
+      icon: 'award',
       title: 'Succès Garanti',
       description: '95% taux de réussite aux examens nationaux.'
     }
@@ -105,7 +105,7 @@ const hoveredIndex = ref(-1)
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
@@ -125,8 +125,7 @@ const hoveredIndex = ref(-1)
 }
 
 .feature-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 
 .feature-card h3 {
@@ -164,16 +163,12 @@ const hoveredIndex = ref(-1)
   }
 
   .features-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
 
   .feature-card {
     padding: 2rem;
-  }
-
-  .feature-icon {
-    font-size: 2.5rem;
   }
 
   .feature-card h3 {
@@ -186,16 +181,16 @@ const hoveredIndex = ref(-1)
     padding: 2.5rem 0;
   }
 
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
   .section-header h2 {
     font-size: 1.4rem;
   }
 
   .feature-card {
     padding: 1.5rem;
-  }
-
-  .feature-icon {
-    font-size: 2.2rem;
   }
 
   .feature-card h3 {
