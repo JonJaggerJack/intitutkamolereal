@@ -564,24 +564,8 @@ const programs = [
     padding: 1.2rem;
   }
 
-  .program-icon {
-    font-size: 2.2rem;
-  }
-
   .program-card h3 {
     font-size: 1.2rem;
-  }
-
-  .carousel-card img {
-    height: 160px;
-  }
-
-  .carousel-card-content {
-    padding: 1.2rem;
-  }
-
-  .carousel-card h4 {
-    font-size: 1rem;
   }
 }
 </style>

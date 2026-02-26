@@ -616,15 +616,6 @@ h2 {
     font-size: 1.5rem;
   }
 
-  .program-icon,
-  .curriculum-icon {
-    font-size: 2.5rem;
-  }
-
-  .department-icon {
-    font-size: 2.5rem;
-  }
-
   .stats-grid {
     grid-template-columns: 1fr;
     gap: 1.2rem;

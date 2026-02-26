@@ -72,7 +72,7 @@
             <div class="timeline-connector" v-if="index < leaders.length - 1"></div>
             <div class="leader-badge" :class="leader.type">
               <span v-if="leader.type === 'pretre'"><Icon name="cross" size="small" color="white" /></span>
-              <span v-else><Icon name="user" size="small" color="white" /></span>
+              <span v-else><Icon name="user" size="small" color="var(--primary)" /></span>
             </div>
             <div class="leader-content">
               <div class="leader-period">{{ leader.period }}</div>
@@ -519,7 +519,6 @@ const options = [
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   z-index: 2;
 }
@@ -875,10 +874,6 @@ const options = [
     gap: 1rem;
   }
 
-  .history-icon {
-    font-size: 3rem;
-  }
-
   .timeline {
     padding-left: 1.5rem;
   }
@@ -913,7 +908,6 @@ const options = [
     left: -46px;
     width: 28px;
     height: 28px;
-    font-size: 0.9rem;
   }
 
   .timeline-connector {
@@ -1016,7 +1010,6 @@ const options = [
     left: -38px;
     width: 24px;
     height: 24px;
-    font-size: 0.75rem;
   }
 
   .timeline-connector {
@@ -1049,12 +1042,6 @@ const options = [
     padding: 1.5rem;
   }
 
-  .history-icon,
-  .option-icon,
-  .value-icon {
-    font-size: 2.5rem;
-  }
-
   .timeline-content h5 {
     font-size: 1.1rem;
   }
@@ -1069,10 +1056,6 @@ const options = [
 
   .stat-number {
     font-size: 2.2rem;
-  }
-
-  .detail-icon {
-    font-size: 1.75rem;
   }
 
   .team-image {

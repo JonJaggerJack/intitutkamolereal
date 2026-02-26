@@ -448,11 +448,6 @@ const internalSchedule = [
     font-size: 1.5rem;
   }
 
-  .facility-icon,
-  .feature-icon {
-    font-size: 2rem;
-  }
-
   .facility-card,
   .support-card {
     padding: 1.2rem;

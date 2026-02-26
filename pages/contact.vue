@@ -231,10 +231,6 @@ const submitForm = () => {
     margin-bottom: 2rem;
   }
 
-  .info-icon {
-    font-size: 2rem;
-  }
-
   .contact-form {
     padding: 2rem;
   }
@@ -258,10 +254,6 @@ const submitForm = () => {
   .info-item {
     gap: 0.8rem;
     margin-bottom: 1.5rem;
-  }
-
-  .info-icon {
-    font-size: 1.75rem;
   }
 
   .info-item h4 {

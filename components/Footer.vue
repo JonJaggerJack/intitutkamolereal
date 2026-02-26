@@ -186,7 +186,6 @@
 @media (max-width: 768px) {
   .footer {
     padding: 3rem 0 1.5rem;
-    margin-top: 3rem;
   }
 
   .footer-grid {
@@ -217,7 +216,6 @@
 @media (max-width: 480px) {
   .footer {
     padding: 2.5rem 0 1rem;
-    margin-top: 2rem;
   }
 
   .footer-grid {

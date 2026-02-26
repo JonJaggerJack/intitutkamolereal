@@ -98,25 +98,25 @@
           
           <div class="careers-grid">
             <div class="career-benefit">
-              <div class="benefit-icon"><Icon name="award" size="large" color="var(--secondary)" /></div>
+              <div class="benefit-icon"><Icon name="award" size="large" color="white" /></div>
               <h3>Environnement Professionnel</h3>
               <p>Travaillez dans un cadre moderne et stimulant</p>
             </div>
             
             <div class="career-benefit">
-              <div class="benefit-icon"><Icon name="trending" size="large" color="var(--secondary)" /></div>
+              <div class="benefit-icon"><Icon name="trending" size="large" color="white" /></div>
               <h3>Développement de Carrière</h3>
               <p>Formations continues et opportunités d'avancement</p>
             </div>
             
             <div class="career-benefit">
-              <div class="benefit-icon"><Icon name="users" size="large" color="var(--secondary)" /></div>
+              <div class="benefit-icon"><Icon name="users" size="large" color="white" /></div>
               <h3>Équipe Solidaire</h3>
               <p>Collaborez avec des collègues passionnés</p>
             </div>
             
             <div class="career-benefit">
-              <div class="benefit-icon"><Icon name="target" size="large" color="var(--secondary)" /></div>
+              <div class="benefit-icon"><Icon name="target" size="large" color="white" /></div>
               <h3>Impact Positif</h3>
               <p>Contribuez à former la prochaine génération</p>
             </div>
@@ -799,14 +799,6 @@ h2 {
   .teacher-badge {
     font-size: 0.8rem;
     padding: 0.3rem 0.6rem;
-  }
-
-  .support-icon {
-    font-size: 2.5rem;
-  }
-
-  .benefit-icon {
-    font-size: 2.5rem;
   }
 
   .career-benefit h3 {
