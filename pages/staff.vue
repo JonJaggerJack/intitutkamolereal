@@ -690,11 +690,13 @@ h2 {
 @media (max-width: 768px) {
   h2 {
     font-size: 1.8rem;
+    text-align: left;
   }
 
   .section-description {
     font-size: 1rem;
     margin-bottom: 2rem;
+    text-align: left;
   }
 
   .leadership-grid {
@@ -763,6 +765,14 @@ h2 {
 }
 
 @media (max-width: 480px) {
+  h2 {
+    text-align: left;
+  }
+
+  .section-description {
+    text-align: left;
+  }
+
   .leadership-section,
   .teachers-section,
   .support-section,
