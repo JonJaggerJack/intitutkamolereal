@@ -223,15 +223,15 @@
   }
 
   .footer-col {
-    text-align: center;
+    text-align: left;
   }
 
   .footer-col ul {
-    text-align: center;
+    text-align: left;
   }
 
   .social-links {
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .social-links a {
