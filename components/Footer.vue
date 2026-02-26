@@ -194,6 +194,10 @@
     margin-bottom: 2rem;
   }
 
+  .footer-col {
+    text-align: left;
+  }
+
   .footer-col h4 {
     font-size: 1rem;
     margin-bottom: 1rem;
@@ -202,6 +206,14 @@
   .footer-col p,
   .footer-col li {
     font-size: 0.95rem;
+  }
+
+  .footer-col ul {
+    text-align: left;
+  }
+
+  .social-links {
+    justify-content: flex-start;
   }
 
   .footer-bottom {
