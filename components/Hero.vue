@@ -23,7 +23,7 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  badge: '🌟 Excellence Académique depuis 1952'
+  badge: 'Excellence Académique depuis 1952'
 })
 
 const heroStyle = computed(() => ({

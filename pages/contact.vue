@@ -18,7 +18,7 @@
             <h2>Informations de Contact</h2>
             
             <div class="info-item">
-              <div class="info-icon">🏢</div>
+              <div class="info-icon"><Icon name="building" size="large" color="var(--secondary)" /></div>
               <div>
                 <h4>Institut</h4>
                 <p><strong>Institut Kamole / Collège St François de Sales</strong></p>
@@ -29,7 +29,7 @@
             </div>
 
             <div class="info-item">
-              <div class="info-icon">📍</div>
+              <div class="info-icon"><Icon name="pin" size="large" color="var(--secondary)" /></div>
               <div>
                 <h4>Adresse</h4>
                 <p>Bukavu, Sud-Kivu</p>
@@ -38,7 +38,7 @@
             </div>
 
             <div class="info-item">
-              <div class="info-icon">📞</div>
+              <div class="info-icon"><Icon name="phone" size="large" color="var(--secondary)" /></div>
               <div>
                 <h4>Téléphone</h4>
                 <p><a href="tel:+243990977925">+243 990 977 925</a></p>
@@ -46,7 +46,7 @@
             </div>
 
             <div class="info-item">
-              <div class="info-icon">📧</div>
+              <div class="info-icon"><Icon name="email" size="large" color="var(--secondary)" /></div>
               <div>
                 <h4>Email</h4>
                 <p><a href="mailto:contact@institutkamole.cd">contact@institutkamole.cd</a></p>
@@ -54,7 +54,7 @@
             </div>
 
             <div class="info-item">
-              <div class="info-icon">🕐</div>
+              <div class="info-icon"><Icon name="clock" size="large" color="var(--secondary)" /></div>
               <div>
                 <h4>Heures d'Ouverture</h4>
                 <p>Lun-Ven: 8:00 - 17:00<br>Sam: 9:00 - 12:00<br>Dim: Fermé</p>

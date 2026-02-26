@@ -25,7 +25,7 @@
             <p class="leader-title">{{ leader.title }}</p>
             <p class="leader-bio">{{ leader.bio }}</p>
             <div class="leader-contact">
-              <a :href="`mailto:${leader.email}`">📧 {{ leader.email }}</a>
+              <a :href="`mailto:${leader.email}`"><Icon name="email" size="small" color="var(--secondary)" /> {{ leader.email }}</a>
             </div>
           </div>
         </div>
@@ -46,7 +46,7 @@
             @click="activeTab = dept.id"
             class="tab-button"
           >
-            {{ dept.icon }} {{ dept.name }}
+            <Icon :name="dept.icon" size="small" color="var(--secondary)" /> {{ dept.name }}
           </button>
         </div>
         
@@ -75,7 +75,7 @@
         
         <div class="support-grid">
           <div v-for="staff in supportStaff" :key="staff.id" class="support-card">
-            <div class="support-icon">{{ staff.icon }}</div>
+            <div class="support-icon"><Icon :name="staff.icon" size="large" color="var(--secondary)" /></div>
             <h3>{{ staff.department }}</h3>
             <p class="support-head">{{ staff.head }}</p>
             <p>{{ staff.description }}</p>
@@ -98,25 +98,25 @@
           
           <div class="careers-grid">
             <div class="career-benefit">
-              <div class="benefit-icon">💼</div>
+              <div class="benefit-icon"><Icon name="award" size="large" color="var(--secondary)" /></div>
               <h3>Environnement Professionnel</h3>
               <p>Travaillez dans un cadre moderne et stimulant</p>
             </div>
             
             <div class="career-benefit">
-              <div class="benefit-icon">📈</div>
+              <div class="benefit-icon"><Icon name="trending" size="large" color="var(--secondary)" /></div>
               <h3>Développement de Carrière</h3>
               <p>Formations continues et opportunités d'avancement</p>
             </div>
             
             <div class="career-benefit">
-              <div class="benefit-icon">🤝</div>
+              <div class="benefit-icon"><Icon name="users" size="large" color="var(--secondary)" /></div>
               <h3>Équipe Solidaire</h3>
               <p>Collaborez avec des collègues passionnés</p>
             </div>
             
             <div class="career-benefit">
-              <div class="benefit-icon">🎯</div>
+              <div class="benefit-icon"><Icon name="target" size="large" color="var(--secondary)" /></div>
               <h3>Impact Positif</h3>
               <p>Contribuez à former la prochaine génération</p>
             </div>
@@ -174,10 +174,10 @@ const leadership = [
 ]
 
 const teachingDepartments = [
-  { id: 1, name: 'Sciences', icon: '🔬' },
-  { id: 2, name: 'Lettres', icon: '📚' },
-  { id: 3, name: 'Sciences Humaines', icon: '🌍' },
-  { id: 4, name: 'Arts & Sports', icon: '🎨' }
+  { id: 1, name: 'Sciences', icon: 'lab' },
+  { id: 2, name: 'Lettres', icon: 'book' },
+  { id: 3, name: 'Sciences Humaines', icon: 'globe' },
+  { id: 4, name: 'Arts & Sports', icon: 'palette' }
 ]
 
 const teachers = [
@@ -290,7 +290,7 @@ const teachers = [
 const supportStaff = [
   {
     id: 1,
-    icon: '🏥',
+    icon: 'heart',
     department: 'Service de Santé',
     head: 'Infirmière Rose-Marie Charles',
     description: 'Soins de santé et bien-être des élèves',
@@ -303,7 +303,7 @@ const supportStaff = [
   },
   {
     id: 2,
-    icon: '📚',
+    icon: 'book',
     department: 'Bibliothèque',
     head: 'Mme. Josette Lafleur',
     description: 'Gestion des ressources documentaires',
@@ -316,7 +316,7 @@ const supportStaff = [
   },
   {
     id: 3,
-    icon: '💼',
+    icon: 'award',
     department: 'Administration',
     head: 'M. Patrick Noel',
     description: 'Services administratifs et académiques',
@@ -329,7 +329,7 @@ const supportStaff = [
   },
   {
     id: 4,
-    icon: '🍽️',
+    icon: 'utensils',
     department: 'Restauration',
     head: 'Chef Claude Destin',
     description: 'Préparation des repas pour la cantine',
@@ -342,7 +342,7 @@ const supportStaff = [
   },
   {
     id: 5,
-    icon: '🔧',
+    icon: 'wrench',
     department: 'Maintenance',
     head: 'M. Frantz Augustin',
     description: 'Entretien et maintenance des infrastructures',
@@ -355,7 +355,7 @@ const supportStaff = [
   },
   {
     id: 6,
-    icon: '🎯',
+    icon: 'target',
     department: 'Orientation',
     head: 'Conseillère Michèle Sanon',
     description: 'Accompagnement et orientation des élèves',
@@ -582,7 +582,6 @@ h2 {
 }
 
 .support-icon {
-  font-size: 3rem;
   margin-bottom: 1rem;
 }
 
@@ -642,7 +641,6 @@ h2 {
 }
 
 .benefit-icon {
-  font-size: 3rem;
   margin-bottom: 1rem;
 }
 

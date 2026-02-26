@@ -19,7 +19,7 @@
         
         <div class="facilities-grid">
           <div v-for="facility in facilities" :key="facility.id" class="facility-card">
-            <div class="facility-icon">{{ facility.icon }}</div>
+            <div class="facility-icon"><Icon :name="facility.icon" size="large" color="var(--secondary)" /></div>
             <h3>{{ facility.title }}</h3>
             <p>{{ facility.description }}</p>
           </div>
@@ -37,7 +37,7 @@
             
             <div class="internat-features">
               <div class="feature">
-                <span class="feature-icon">🛏️</span>
+                <span class="feature-icon"><Icon name="bed" size="medium" color="var(--secondary)" /></span>
                 <div>
                   <h4>Chambres Confortables</h4>
                   <p>Chambres doubles et triples équipées avec tout le nécessaire</p>
@@ -45,7 +45,7 @@
               </div>
               
               <div class="feature">
-                <span class="feature-icon">🍽️</span>
+                <span class="feature-icon"><Icon name="utensils" size="medium" color="var(--secondary)" /></span>
                 <div>
                   <h4>Restauration Équilibrée</h4>
                   <p>3 repas par jour préparés par notre chef cuisinier</p>
@@ -53,7 +53,7 @@
               </div>
               
               <div class="feature">
-                <span class="feature-icon">👨‍🏫</span>
+                <span class="feature-icon"><Icon name="graduation" size="medium" color="var(--secondary)" /></span>
                 <div>
                   <h4>Études Surveillées</h4>
                   <p>Encadrement et soutien académique tous les soirs</p>
@@ -61,7 +61,7 @@
               </div>
               
               <div class="feature">
-                <span class="feature-icon">🔒</span>
+                <span class="feature-icon"><Icon name="lock" size="medium" color="var(--secondary)" /></span>
                 <div>
                   <h4>Sécurité 24/7</h4>
                   <p>Surveillance et sécurité assurées jour et nuit</p>
@@ -130,37 +130,37 @@ useSeoMeta({
 const facilities = [
   {
     id: 1,
-    icon: '📚',
+    icon: 'book',
     title: 'Bibliothèque Moderne',
     description: 'Plus de 10,000 livres et ressources numériques accessibles à tous nos étudiants.'
   },
   {
     id: 2,
-    icon: '🔬',
+    icon: 'lab',
     title: 'Laboratoires Scientifiques',
     description: 'Laboratoires de chimie, physique et biologie équipés du matériel le plus récent.'
   },
   {
     id: 3,
-    icon: '💻',
+    icon: 'laptop',
     title: 'Salles Informatiques',
     description: '3 salles avec 80 ordinateurs connectés à internet haute vitesse.'
   },
   {
     id: 4,
-    icon: '⚽',
+    icon: 'sport',
     title: 'Terrains de Sport',
     description: 'Terrains de football, basketball et volleyball pour le développement physique.'
   },
   {
     id: 5,
-    icon: '🎭',
+    icon: 'theater',
     title: 'Salle Polyvalente',
     description: 'Espace pour les événements culturels, théâtre et cérémonies.'
   },
   {
     id: 6,
-    icon: '🍽️',
+    icon: 'utensils',
     title: 'Cantine Moderne',
     description: 'Service de restauration offrant des repas équilibrés et variés.'
   }
@@ -270,7 +270,6 @@ const internalSchedule = [
 }
 
 .facility-icon {
-  font-size: 3rem;
   margin-bottom: 1rem;
 }
 
@@ -300,7 +299,6 @@ const internalSchedule = [
 }
 
 .feature-icon {
-  font-size: 2rem;
   flex-shrink: 0;
 }
 

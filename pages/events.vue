@@ -27,8 +27,8 @@
               <h3>{{ event.title }}</h3>
               <p>{{ event.description }}</p>
               <div class="event-meta">
-                <span><span class="icon">🕐</span> {{ event.time }}</span>
-                <span><span class="icon">📍</span> {{ event.location }}</span>
+                <span><Icon name="clock" size="small" color="var(--secondary)" /> {{ event.time }}</span>
+                <span><Icon name="pin" size="small" color="var(--secondary)" /> {{ event.location }}</span>
               </div>
             </div>
           </div>

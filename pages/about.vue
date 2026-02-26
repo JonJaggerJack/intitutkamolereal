@@ -16,7 +16,7 @@
         <h2>Bref Historique de l'École</h2>
         
         <div class="history-card creation">
-          <div class="history-icon">📅</div>
+          <div class="history-icon"><Icon name="calendar" size="large" color="var(--secondary)" /></div>
           <div class="history-content">
             <h3>Date de Création</h3>
             <p>L'Institut KAMOLE a été créé le <strong>8 Mai 1952</strong> sur numéro d'agrément <strong>22/2962/2062</strong> par Ordonnance du Gouverneur Général de la République Démocratique du Congo.</p>
@@ -71,15 +71,15 @@
           <div v-for="(leader, index) in leaders" :key="leader.period" class="leader-card" :class="{ 'highlighted': leader.note }">
             <div class="timeline-connector" v-if="index < leaders.length - 1"></div>
             <div class="leader-badge" :class="leader.type">
-              <span v-if="leader.type === 'pretre'">✝</span>
-              <span v-else>👤</span>
+              <span v-if="leader.type === 'pretre'"><Icon name="cross" size="small" color="white" /></span>
+              <span v-else><Icon name="user" size="small" color="white" /></span>
             </div>
             <div class="leader-content">
               <div class="leader-period">{{ leader.period }}</div>
               <h4>{{ leader.name }}</h4>
               <p class="leader-title">{{ leader.role }}</p>
               <p v-if="leader.note" class="leader-note">
-                <span class="note-icon">📌</span>
+                <span class="note-icon"><Icon name="pin" size="small" color="var(--secondary)" /></span>
                 {{ leader.note }}
               </p>
             </div>
@@ -96,7 +96,7 @@
         
         <div class="options-grid">
           <div v-for="option in options" :key="option.id" class="option-card">
-            <div class="option-icon">{{ option.icon }}</div>
+            <div class="option-icon"><Icon :name="option.icon" size="large" color="var(--secondary)" /></div>
             <h3>{{ option.title }}</h3>
             <p>{{ option.description }}</p>
           </div>
@@ -117,14 +117,14 @@
             
             <div class="internat-details">
               <div class="detail-item">
-                <span class="detail-icon">🏠</span>
+                <span class="detail-icon"><Icon name="home" size="medium" color="var(--secondary)" /></span>
                 <div>
                   <h4>Réouverture</h4>
                   <p>Septembre 2023 après fermeture en 1996 (suite à la guerre de l'AFDL)</p>
                 </div>
               </div>
               <div class="detail-item">
-                <span class="detail-icon">👨‍🎓</span>
+                <span class="detail-icon"><Icon name="graduation" size="medium" color="var(--secondary)" /></span>
                 <div>
                   <h4>Accueil</h4>
                   <p>Actuellement réservé aux garçons</p>
@@ -170,19 +170,19 @@
       <div class="container">
         <div class="values-grid">
           <div class="value-card">
-            <div class="value-icon">🎯</div>
+            <div class="value-icon"><Icon name="target" size="large" color="var(--secondary)" /></div>
             <h3>Notre Mission</h3>
             <p>Former des jeunes leaders responsables, compétents et innovants, capables de contribuer activement au développement de la RDC et du monde.</p>
           </div>
 
           <div class="value-card">
-            <div class="value-icon">✨</div>
+            <div class="value-icon"><Icon name="star" size="large" color="var(--secondary)" /></div>
             <h3>Notre Vision</h3>
             <p>Être l'institution éducative de référence reconnue pour son excellence académique, son encadrement personnalisé et son impact sociétal positif.</p>
           </div>
 
           <div class="value-card">
-            <div class="value-icon">💪</div>
+            <div class="value-icon"><Icon name="award" size="large" color="var(--secondary)" /></div>
             <h3>Nos Valeurs</h3>
             <p>Ponctualité, Discipline, Travail, Excellence, Intégrité et Solidarité. Ce sont les piliers qui guident toutes nos actions.</p>
           </div>
@@ -278,25 +278,25 @@ const leaders = [
 const options = [
   {
     id: 1,
-    icon: '📚',
+    icon: 'book',
     title: 'L\'Éducation de Base',
     description: 'Ancien cycle d\'orientation, fondation solide pour tous les élèves.'
   },
   {
     id: 2,
-    icon: '👨‍🏫',
+    icon: 'graduation',
     title: 'Humanités Pédagogiques',
     description: 'Formation des futurs enseignants avec excellence académique.'
   },
   {
     id: 3,
-    icon: '🤝',
+    icon: 'users',
     title: 'Humanités Techniques Sociales',
     description: 'Préparation aux métiers du social et de l\'accompagnement.'
   },
   {
     id: 4,
-    icon: '💼',
+    icon: 'award',
     title: 'Humanités Commerciales et Gestion',
     description: 'Nouvelle option pour former les gestionnaires et commerciaux de demain.'
   }
@@ -327,7 +327,6 @@ const options = [
 }
 
 .history-icon {
-  font-size: 3.5rem;
   flex-shrink: 0;
 }
 
@@ -621,7 +620,6 @@ const options = [
 }
 
 .option-icon {
-  font-size: 3.5rem;
   margin-bottom: 1rem;
 }
 
@@ -768,7 +766,6 @@ const options = [
 }
 
 .value-icon {
-  font-size: 3.5rem;
   margin-bottom: 1rem;
 }
 

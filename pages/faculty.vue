@@ -18,7 +18,7 @@
         
         <div class="programs-grid">
           <div v-for="program in programs" :key="program.id" class="program-card">
-            <div class="program-icon">{{ program.icon }}</div>
+            <div class="program-icon"><Icon :name="program.icon" size="xlarge" color="var(--secondary)" /></div>
             <h3>{{ program.title }}</h3>
             <p class="program-level">{{ program.level }}</p>
             <p>{{ program.description }}</p>
@@ -41,7 +41,7 @@
         <div class="departments-grid">
           <div v-for="dept in departments" :key="dept.id" class="department-card">
             <div class="department-header" :style="{ background: dept.color }">
-              <span class="department-icon">{{ dept.icon }}</span>
+              <span class="department-icon"><Icon :name="dept.icon" size="large" color="white" /></span>
               <h3>{{ dept.name }}</h3>
             </div>
             <div class="department-content">
@@ -70,37 +70,37 @@
         
         <div class="curriculum-grid">
           <div class="curriculum-item">
-            <div class="curriculum-icon">🎯</div>
+            <div class="curriculum-icon"><Icon name="target" size="large" color="var(--secondary)" /></div>
             <h3>Apprentissage Personnalisé</h3>
             <p>Chaque élève bénéficie d'un suivi individualisé pour maximiser son potentiel.</p>
           </div>
           
           <div class="curriculum-item">
-            <div class="curriculum-icon">💻</div>
+            <div class="curriculum-icon"><Icon name="laptop" size="large" color="var(--secondary)" /></div>
             <h3>Technologies Modernes</h3>
             <p>Intégration des outils numériques et plateformes d'apprentissage interactives.</p>
           </div>
           
           <div class="curriculum-item">
-            <div class="curriculum-icon">🌍</div>
+            <div class="curriculum-icon"><Icon name="globe" size="large" color="var(--secondary)" /></div>
             <h3>Ouverture Internationale</h3>
             <p>Programmes bilingues (français/anglais) et échanges culturels.</p>
           </div>
           
           <div class="curriculum-item">
-            <div class="curriculum-icon">🔬</div>
+            <div class="curriculum-icon"><Icon name="lab" size="large" color="var(--secondary)" /></div>
             <h3>Approche Pratique</h3>
             <p>Expériences en laboratoire, projets concrets et sorties pédagogiques.</p>
           </div>
           
           <div class="curriculum-item">
-            <div class="curriculum-icon">🏆</div>
+            <div class="curriculum-icon"><Icon name="trophy" size="large" color="var(--secondary)" /></div>
             <h3>Excellence Académique</h3>
             <p>Préparation rigoureuse aux examens nationaux et internationaux.</p>
           </div>
           
           <div class="curriculum-item">
-            <div class="curriculum-icon">👥</div>
+            <div class="curriculum-icon"><Icon name="users" size="large" color="var(--secondary)" /></div>
             <h3>Développement Holistique</h3>
             <p>Formation académique, sportive, artistique et citoyenne.</p>
           </div>
@@ -176,7 +176,7 @@ useSeoMeta({
 const programs = [
   {
     id: 1,
-    icon: '📖',
+    icon: 'book',
     title: 'Enseignement Primaire',
     level: '1ère à 6ème année fondamentale',
     description: 'Fondation solide en lecture, écriture, mathématiques et sciences.',
@@ -189,7 +189,7 @@ const programs = [
   },
   {
     id: 2,
-    icon: '🎓',
+    icon: 'graduation',
     title: 'Enseignement Secondaire',
     level: '7ème à 9ème année fondamentale',
     description: 'Approfondissement des connaissances et développement de l\'esprit critique.',
@@ -202,7 +202,7 @@ const programs = [
   },
   {
     id: 3,
-    icon: '🏅',
+    icon: 'trophy',
     title: 'Cycle Terminal',
     level: 'Rhéto, Philo, Math Elem',
     description: 'Préparation intensive aux examens d\'état et à l\'enseignement supérieur.',
@@ -219,7 +219,7 @@ const departments = [
   {
     id: 1,
     name: 'Sciences & Mathématiques',
-    icon: '🔬',
+    icon: 'lab',
     color: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
     description: 'Formation rigoureuse en sciences exactes avec des laboratoires modernes.',
     subjects: ['Mathématiques', 'Physique', 'Chimie', 'Biologie', 'Informatique'],
@@ -228,7 +228,7 @@ const departments = [
   {
     id: 2,
     name: 'Lettres & Langues',
-    icon: '📚',
+    icon: 'book',
     color: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
     description: 'Maîtrise du français, de l\'anglais et développement des compétences littéraires.',
     subjects: ['Français', 'Anglais', 'Espagnol', 'Littérature', 'Philosophie'],
@@ -237,7 +237,7 @@ const departments = [
   {
     id: 3,
     name: 'Sciences Humaines',
-    icon: '🌍',
+    icon: 'globe',
     color: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
     description: 'Compréhension du monde, de l\'histoire et des sociétés.',
     subjects: ['Histoire', 'Géographie', 'Sciences Sociales', 'Économie', 'Civisme'],
@@ -246,7 +246,7 @@ const departments = [
   {
     id: 4,
     name: 'Arts & Sports',
-    icon: '🎨',
+    icon: 'palette',
     color: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
     description: 'Développement de la créativité et du bien-être physique.',
     subjects: ['Arts Plastiques', 'Musique', 'Éducation Physique', 'Théâtre', 'Danse'],
@@ -452,7 +452,6 @@ h2 {
 }
 
 .curriculum-icon {
-  font-size: 3rem;
   margin-bottom: 1rem;
 }
 
