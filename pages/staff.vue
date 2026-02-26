@@ -438,7 +438,6 @@ h2 {
 
 .leader-image {
   margin-bottom: 1.5rem;
-  text-align: center;
 }
 
 .leader-image img {
@@ -447,6 +446,8 @@ h2 {
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid var(--primary);
+  display: block;
+  margin: 0 auto;
 }
 
 .leader-card h3 {
@@ -708,6 +709,7 @@ h2 {
   .leader-image img {
     width: 120px;
     height: 120px;
+    margin: 0;
   }
 
   .leader-card {
@@ -793,6 +795,7 @@ h2 {
   .leader-image img {
     width: 100px;
     height: 100px;
+    margin: 0;
   }
 
   .leader-card h3 {
