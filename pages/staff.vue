@@ -4,6 +4,7 @@
       title="Notre Personnel"
       subtitle="Rencontrez l'équipe dévouée qui fait la différence à Institut Kamole"
       badge="Notre Équipe"
+      background-image="/images/enseignants/2.jpg"
     >
       <template #buttons>
         <NuxtLink to="/contact" class="btn btn-primary">Rejoignez Notre Équipe</NuxtLink>

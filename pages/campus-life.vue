@@ -4,6 +4,7 @@
       title="La Vie du Campus"
       subtitle="Découvrez notre environnement d'apprentissage dynamique et notre communauté accueillante"
       badge="Campus Life"
+      background-image="/images/campus/6.jpg"
     >
       <template #buttons>
         <NuxtLink to="/contact" class="btn btn-primary">Visitez Notre Campus</NuxtLink>

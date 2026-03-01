@@ -4,6 +4,7 @@
       title="Nos Facultés & Programmes"
       subtitle="Explorez nos formations académiques professionnelles et modernes"
       badge="Formations Académiques"
+      background-image="/images/campus/6.jpg"
     >
       <template #buttons>
         <NuxtLink to="/contact" class="btn btn-primary">Demande d'Admission</NuxtLink>

@@ -5,6 +5,7 @@
       title="Façonnons l'Avenir des Meilleurs Élèves"
       subtitle="Collège prestigieux offrant une éducation d'excellence combinée à un cadre de vie stimulant. Développez vos talents académiques et personnels depuis 1952."
       badge="Excellence Académique depuis 1952"
+      background-image="/images/backgrounds/6.jpg"
     >
       <template #buttons>
         <NuxtLink to="/contact" class="btn btn-primary">Demander une Admission</NuxtLink>
@@ -46,10 +47,7 @@
           </div>
 
           <div class="about-image">
-            <!-- Placez votre image dans /public/images/about-school.jpg -->
-            <div class="image-placeholder">
-              <p>Ajoutez votre image: /public/images/about-school.jpg</p>
-            </div>
+            <img src="/images/about-school.jpg" alt="Institut Kamole" class="about-school-img">
           </div>
         </div>
       </div>
@@ -199,26 +197,12 @@ const programs = [
 }
 
 .about-image img {
+  width: 100%;
+  min-height: 250px;
+  object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-}
-
-.image-placeholder {
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  border-radius: 12px;
-  padding: 4rem 2rem;
-  text-align: center;
-  border: 2px dashed #dee2e6;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
-
-.image-placeholder p {
-  color: var(--text);
-  font-size: 0.9rem;
-  margin: 0;
+  display: block;
 }
 
 .programs-section {
@@ -483,6 +467,25 @@ const programs = [
     gap: 2rem;
   }
 
+  .about-image {
+    order: -1;
+  }
+
+  .about-image img {
+    object-fit: contain;
+    max-height: none;
+    max-width: 70%;
+    margin: 0 auto;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .about-highlights {
+    text-align: left;
+  }
+
   .about-text h2 {
     font-size: 1.6rem;
   }
@@ -548,8 +551,11 @@ const programs = [
     font-size: 1.4rem;
   }
 
-  .about-image {
-    margin-top: 1rem;
+  .about-image img {
+    object-fit: contain;
+    max-height: none;
+    max-width: 60%;
+    margin: 0 auto;
   }
 
   .highlight {

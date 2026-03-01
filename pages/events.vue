@@ -4,6 +4,7 @@
       title="Événements & Actualités"
       subtitle="Restez informés de nos activités, célébrations et moments importants"
       badge="Nos Événements"
+      background-image="/images/campus/8.jpg"
     >
       <template #buttons>
         <NuxtLink to="/contact" class="btn btn-primary">S'inscrire à un Événement</NuxtLink>

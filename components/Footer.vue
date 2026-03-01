@@ -4,7 +4,7 @@
       <div class="footer-grid">
         <!-- About -->
         <div class="footer-col">
-          <h4>Institut Kamole</h4>
+          <img src="/images/logos/logo-white.png" alt="Institut Kamole" class="footer-logo">
           <p>Excellence académique depuis 1952. Collège St François de Sales formant les leaders de demain.</p>
           <div class="social-links">
             <a href="#" aria-label="Facebook">
@@ -100,6 +100,13 @@
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 3rem;
   margin-bottom: 3rem;
+}
+
+.footer-logo {
+  height: 60px;
+  width: auto;
+  margin-bottom: 1.5rem;
+  display: block;
 }
 
 .footer-col h4 {
