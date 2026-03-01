@@ -23,7 +23,8 @@ export default defineNuxtConfig({
         { name: 'keywords', content: 'éducation, institut, académie, RDC, congo, bukavu, enseignement, internat, secondaire, collège' }
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" font-size="50" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="%23FBC102">IK</text></svg>' }
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+        { rel: 'shortcut icon', href: '/favicon.svg' }
       ]
     }
   },
