@@ -11,10 +11,12 @@
     "postinstall": "nuxi prepare"
   },
   "dependencies": {
+    "nodemailer": "^8.0.1",
     "nuxt": "^3.8.1",
     "vue": "^3.3.4"
   },
   "devDependencies": {
-    "@nuxt/devtools": "latest"
+    "@nuxt/devtools": "latest",
+    "@types/nodemailer": "^7.0.11"
   }
 }

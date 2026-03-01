@@ -6,7 +6,13 @@ export default defineNuxtConfig({
   // CSS global
   css: ['~/assets/css/main.css'],
 
-  // App metadata
+  // Variables d'environnement serveur (privées)
+  runtimeConfig: {
+    smtpHost: process.env.SMTP_HOST || '',
+    smtpPort: process.env.SMTP_PORT || '587',
+    smtpUser: process.env.SMTP_USER || '',
+    smtpPass: process.env.SMTP_PASS || '',
+  },
   app: {
     head: {
       title: 'Institut Kamole - Excellence Académique & Internat',

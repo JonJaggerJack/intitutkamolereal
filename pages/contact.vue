@@ -50,7 +50,7 @@
               <div class="info-icon"><Icon name="email" size="large" color="var(--secondary)" /></div>
               <div>
                 <h4>Email</h4>
-                <p><a href="mailto:contact@institutkamole.cd">contact@institutkamole.cd</a></p>
+                <p><a href="mailto:contact@institutkamole.com">contact@institutkamole.com</a></p>
               </div>
             </div>
 
@@ -92,7 +92,16 @@
               <textarea v-model="form.message" id="message" rows="5" required></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary">Envoyer le Message</button>
+            <button type="submit" class="btn btn-primary" :disabled="loading">
+              {{ loading ? 'Envoi en cours...' : 'Envoyer le Message' }}
+            </button>
+
+            <div v-if="success" class="form-feedback success">
+              ✓ Message envoyé avec succès ! Nous vous répondrons bientôt.
+            </div>
+            <div v-if="error" class="form-feedback error">
+              ✗ Une erreur est survenue. Veuillez réessayer ou nous écrire directement.
+            </div>
           </form>
         </div>
       </div>
@@ -114,16 +123,26 @@ const form = ref({
   message: ''
 })
 
-const submitForm = () => {
-  console.log('Form submitted:', form.value)
-  // Handle form submission (send email, etc.)
-  alert('Merci! Nous avons reçu votre message. Nous vous contacterons bientôt.')
-  form.value = {
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: ''
+const loading = ref(false)
+const success = ref(false)
+const error = ref(false)
+
+const submitForm = async () => {
+  loading.value = true
+  success.value = false
+  error.value = false
+
+  try {
+    await $fetch('/api/contact', {
+      method: 'POST',
+      body: form.value
+    })
+    success.value = true
+    form.value = { name: '', email: '', phone: '', subject: '', message: '' }
+  } catch {
+    error.value = true
+  } finally {
+    loading.value = false
   }
 }
 </script>
@@ -210,6 +229,23 @@ const submitForm = () => {
 .form-group textarea:focus {
   outline: none;
   border-color: var(--accent);
+}
+
+.form-feedback {
+  margin-top: 1rem;
+  padding: 0.9rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.form-feedback.success {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.form-feedback.error {
+  background: #fee2e2;
+  color: #991b1b;
 }
 
 @media (max-width: 768px) {
