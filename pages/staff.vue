@@ -12,7 +12,7 @@
     </Hero>
 
     <!-- Leadership Team -->
-    <section class="leadership-section">
+    <!-- <section class="leadership-section">
       <div class="container">
         <h2>Direction & Administration</h2>
         <p class="section-description">L'équipe de direction qui guide notre vision</p>
@@ -31,38 +31,17 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <!-- Teaching Staff by Department -->
+    <!-- Teaching Staff -->
     <section class="teachers-section">
       <div class="container">
         <h2>Corps Enseignant</h2>
         <p class="section-description">Des professeurs qualifiés et passionnés</p>
         
-        <div class="department-tabs">
-          <button 
-            v-for="dept in teachingDepartments" 
-            :key="dept.id"
-            :class="{ active: activeTab === dept.id }"
-            @click="activeTab = dept.id"
-            class="tab-button"
-          >
-            <Icon :name="dept.icon" size="small" color="var(--secondary)" /> {{ dept.name }}
-          </button>
-        </div>
-        
-        <div class="teachers-grid">
-          <div v-for="teacher in filteredTeachers" :key="teacher.id" class="teacher-card">
-            <div class="teacher-image">
-              <img :src="teacher.image" :alt="teacher.name">
-              <div class="teacher-badge">{{ teacher.specialization }}</div>
-            </div>
-            <div class="teacher-info">
-              <h3>{{ teacher.name }}</h3>
-              <p class="teacher-subject">{{ teacher.subject }}</p>
-              <p class="teacher-credentials">{{ teacher.credentials }}</p>
-              <p class="teacher-experience">{{ teacher.experience }}</p>
-            </div>
+        <div class="gallery-grid">
+          <div v-for="image in teacherImages" :key="image" class="gallery-item">
+            <img :src="`/images/enseignants/${image}`" :alt="`Enseignant ${image}`">
           </div>
         </div>
       </div>
@@ -145,7 +124,10 @@ useSeoMeta({
   description: 'Découvrez l\'équipe dévouée de l\'Institut Kamole : direction, enseignants et personnel de soutien.'
 })
 
-const activeTab = ref(1)
+// Images des enseignants
+const teacherImages = [
+  '1.jpg', '2.jpg', '3.jpg', '4.jpg'
+]
 
 const leadership = [
   {
@@ -174,119 +156,7 @@ const leadership = [
   }
 ]
 
-const teachingDepartments = [
-  { id: 1, name: 'Sciences', icon: 'lab' },
-  { id: 2, name: 'Lettres', icon: 'book' },
-  { id: 3, name: 'Sciences Humaines', icon: 'globe' },
-  { id: 4, name: 'Arts & Sports', icon: 'palette' }
-]
 
-const teachers = [
-  // Sciences
-  {
-    id: 1,
-    name: 'Dr. Marc Antoine Dufief',
-    subject: 'Chimie & Physique',
-    department: 1,
-    specialization: 'Docteur',
-    credentials: 'Doctorat en Chimie Organique',
-    experience: '15 ans d\'enseignement',
-    image: '/images/enseignants/1.jpg'
-  },
-  {
-    id: 2,
-    name: 'Prof. Nadine Saint-Louis',
-    subject: 'Mathématiques',
-    department: 1,
-    specialization: 'Professeur',
-    credentials: 'Master en Mathématiques Appliquées',
-    experience: '12 ans d\'expérience',
-    image: '/images/enseignants/2.jpg'
-  },
-  {
-    id: 3,
-    name: 'Prof. James Etienne',
-    subject: 'Biologie',
-    department: 1,
-    specialization: 'Professeur',
-    credentials: 'Licence en Biologie Moléculaire',
-    experience: '8 ans d\'enseignement',
-    image: '/images/enseignants/3.jpg'
-  },
-  // Lettres
-  {
-    id: 4,
-    name: 'Prof. Marie-Claude Beauvoir',
-    subject: 'Français & Littérature',
-    department: 2,
-    specialization: 'Professeur',
-    credentials: 'Master en Lettres Modernes',
-    experience: '18 ans d\'expérience',
-    image: '/images/enseignants/4.jpg'
-  },
-  {
-    id: 5,
-    name: 'Prof. Sarah Johnson',
-    subject: 'Anglais',
-    department: 2,
-    specialization: 'Professeur',
-    credentials: 'Master TESOL - Native Speaker',
-    experience: '10 ans d\'enseignement',
-    image: '/images/enseignants/5.svg'
-  },
-  {
-    id: 6,
-    name: 'Prof. Carlos Rodriguez',
-    subject: 'Espagnol',
-    department: 2,
-    specialization: 'Professeur',
-    credentials: 'Licence en Langues Romanes',
-    experience: '7 ans d\'expérience',
-    image: '/images/enseignants/6.svg'
-  },
-  // Sciences Humaines
-  {
-    id: 7,
-    name: 'Prof. Jean-Baptiste Laurent',
-    subject: 'Histoire & Géographie',
-    department: 3,
-    specialization: 'Professeur',
-    credentials: 'Master en Histoire Contemporaine',
-    experience: '14 ans d\'enseignement',
-    image: '/images/enseignants/7.svg'
-  },
-  {
-    id: 8,
-    name: 'Prof. Fabienne Moreau',
-    subject: 'Sciences Sociales',
-    department: 3,
-    specialization: 'Professeur',
-    credentials: 'Licence en Sociologie',
-    experience: '9 ans d\'expérience',
-    image: '/images/enseignants/8.svg'
-  },
-  // Arts & Sports
-  {
-    id: 9,
-    name: 'Prof. Nadège Pierre-Louis',
-    subject: 'Arts Plastiques',
-    department: 4,
-    specialization: 'Professeur',
-    credentials: 'Master en Beaux-Arts',
-    experience: '11 ans d\'enseignement',
-    image: '/images/enseignants/9.svg'
-  },
-  {
-    id: 10,
-    name: 'Prof. Ricardo Joseph',
-    subject: 'Éducation Physique',
-    department: 4,
-    specialization: 'Coach',
-    credentials: 'Diplôme STAPS - Ex-athlète national',
-    experience: '13 ans d\'expérience',
-    image: '/images/enseignants/10.svg'
-  }
-]
 
 const supportStaff = [
   {
@@ -368,10 +238,6 @@ const supportStaff = [
     ]
   }
 ]
-
-const filteredTeachers = computed(() => {
-  return teachers.filter(teacher => teacher.department === activeTab.value)
-})
 </script>
 
 <style scoped>
@@ -475,7 +341,66 @@ h2 {
   font-size: 0.9rem;
 }
 
-.department-tabs {
+/* Gallery Grid - same as campus page */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  aspect-ratio: 4/3;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Commented out - old teachers gallery */
+/* .teachers-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.teacher-photo {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  aspect-ratio: 3/4;
+}
+
+.teacher-photo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.teacher-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+} */
+
+/* Commented out - old tabs system */
+/* .department-tabs {
   display: flex;
   justify-content: center;
   gap: 1rem;
@@ -564,7 +489,7 @@ h2 {
   color: var(--text-secondary);
   font-size: 0.9rem;
   margin-bottom: 0.3rem;
-}
+} */
 
 .support-grid {
   display: grid;
@@ -718,7 +643,17 @@ h2 {
     text-align: left;
   }
 
-  .department-tabs {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  /* .teachers-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+  } */
+
+  /* .department-tabs {
     flex-direction: column;
     gap: 0.75rem;
   }
@@ -732,11 +667,11 @@ h2 {
   .teachers-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-  }
+  } */
 
-  .teacher-image {
+  /* .teacher-image {
     height: 220px;
-  }
+  } */
 
   .support-grid {
     grid-template-columns: 1fr;
@@ -803,7 +738,17 @@ h2 {
     font-size: 1.1rem;
   }
 
-  .tab-button {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* .teachers-gallery {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  } */
+
+  /* .tab-button {
     padding: 0.6rem 1rem;
     font-size: 0.9rem;
   }
@@ -815,7 +760,7 @@ h2 {
   .teacher-badge {
     font-size: 0.8rem;
     padding: 0.3rem 0.6rem;
-  }
+  } */
 
   .career-benefit h3 {
     font-size: 1rem;

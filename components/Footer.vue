@@ -29,7 +29,7 @@
             <li><NuxtLink to="/">Accueil</NuxtLink></li>
             <li><NuxtLink to="/about">À propos</NuxtLink></li>
             <li><NuxtLink to="/faculty">Faculté</NuxtLink></li>
-            <li><NuxtLink to="/campus-life">Campus</NuxtLink></li>
+            <li><NuxtLink to="/campus">Campus</NuxtLink></li>
           </ul>
         </div>
 
@@ -70,7 +70,6 @@
           <ul>
             <li><a href="#">Politique de Confidentialité</a></li>
             <li><a href="#">Conditions d'Utilisation</a></li>
-            <li><a href="#">Plan du Site</a></li>
             <li><a href="/contact">Nous Contacter</a></li>
           </ul>
         </div>
@@ -79,6 +78,7 @@
       <div class="footer-bottom">
         <p>&copy; 2026 Institut Kamole / Collège St François de Sales. Tous droits réservés.</p>
         <p>Devise : « Ponctualité - Discipline - Travail »</p>
+        <p>Conçu par : <a href="https://effyiskey.com" target="_blank" rel="noopener noreferrer">Effyiskey.com</a></p>
       </div>
     </div>
   </footer>

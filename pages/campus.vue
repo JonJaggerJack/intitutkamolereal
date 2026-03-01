@@ -8,7 +8,6 @@
     >
       <template #buttons>
         <NuxtLink to="/contact" class="btn btn-primary">Visitez Notre Campus</NuxtLink>
-        <NuxtLink to="/events" class="btn btn-secondary">Voir les Événements</NuxtLink>
       </template>
     </Hero>
 
@@ -78,19 +77,15 @@
       </div>
     </section>
 
-    <!-- Student Activities -->
+    <!-- Student Activities - Gallery -->
     <section class="activities-section">
       <div class="container">
-        <h2>Activités Étudiantes</h2>
-        <p class="section-description">Un équilibre parfait entre études et loisirs</p>
+        <h2>Un aperçu de chez nous</h2>
+        <p class="section-description">Découvrez notre campus à travers ces images</p>
         
-        <div class="activities-grid">
-          <div v-for="activity in activities" :key="activity.id" class="activity-card">
-            <img :src="activity.image" :alt="activity.title">
-            <div class="activity-content">
-              <h3>{{ activity.title }}</h3>
-              <p>{{ activity.description }}</p>
-            </div>
+        <div class="gallery-grid">
+          <div v-for="image in campusImages" :key="image" class="gallery-item">
+            <img :src="`/images/campus/${image}`" :alt="`Campus ${image}`">
           </div>
         </div>
       </div>
@@ -124,7 +119,7 @@
 
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Vie du Campus - Institut Kamole',
+  title: 'Campus - Institut Kamole',
   description: 'Découvrez la vie quotidienne, les installations et l\'internat de l\'Institut Kamole.'
 })
 
@@ -167,31 +162,10 @@ const facilities = [
   }
 ]
 
-const activities = [
-  {
-    id: 1,
-    title: 'Clubs Académiques',
-    image: '/images/campus/3.jpg',
-    description: 'Club de mathématiques, sciences, débat et langues pour approfondir vos connaissances.'
-  },
-  {
-    id: 2,
-    title: 'Sports & Athlétisme',
-    image: '/images/campus/4.jpg',
-    description: 'Équipes de football, basketball, volleyball et athlétisme.'
-  },
-  {
-    id: 3,
-    title: 'Arts & Culture',
-    image: '/images/campus/5.jpg',
-    description: 'Chorale, théâtre, peinture et danse pour exprimer votre créativité.'
-  },
-  {
-    id: 4,
-    title: 'Service Communautaire',
-    image: '/images/campus/6.jpg',
-    description: 'Programmes de bénévolat et projets communautaires pour développer la citoyenneté.'
-  }
+// Liste de toutes les images dans le dossier campus
+const campusImages = [
+  '1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg',
+  '7.jpg', '8.jpg', '14.jpg', '15.jpg', '16.jpg'
 ]
 
 const externalSchedule = [
@@ -314,37 +288,33 @@ const internalSchedule = [
   box-shadow: 0 10px 40px rgba(0,0,0,0.15);
 }
 
-.activities-grid {
+/* Gallery Grid */
+.gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
   margin-top: 3rem;
 }
 
-.activity-card {
-  background: var(--bg-primary);
-  border-radius: 12px;
+.gallery-item {
+  position: relative;
   overflow: hidden;
-  transition: transform 0.3s ease;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  aspect-ratio: 4/3;
 }
 
-.activity-card:hover {
+.gallery-item:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
 }
 
-.activity-card img {
+.gallery-item img {
   width: 100%;
-  height: 200px;
+  height: 100%;
   object-fit: cover;
-}
-
-.activity-content {
-  padding: 1.5rem;
-}
-
-.activity-content h3 {
-  color: var(--primary);
-  margin-bottom: 0.5rem;
+  display: block;
 }
 
 .schedule-grid {
@@ -419,9 +389,9 @@ const internalSchedule = [
     text-align: center;
   }
 
-  .activities-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
   }
 
   .schedule-grid {
@@ -449,9 +419,12 @@ const internalSchedule = [
     font-size: 1.5rem;
   }
 
-  .facility-card,
-  .support-card {
+  .facility-card {
     padding: 1.2rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
   }
 
   .schedule-item {

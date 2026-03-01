@@ -19,8 +19,7 @@
           <li><NuxtLink to="/about" class="nav-link" exact-active-class="active">À propos</NuxtLink></li>
           <li><NuxtLink to="/faculty" class="nav-link" exact-active-class="active">Faculté</NuxtLink></li>
           <li><NuxtLink to="/staff" class="nav-link" exact-active-class="active">Personnel</NuxtLink></li>
-          <li><NuxtLink to="/events" class="nav-link" exact-active-class="active">Événements</NuxtLink></li>
-          <li><NuxtLink to="/campus-life" class="nav-link" exact-active-class="active">Campus</NuxtLink></li>
+          <li><NuxtLink to="/campus" class="nav-link" exact-active-class="active">Campus</NuxtLink></li>
           <li><NuxtLink to="/contact" class="nav-link" exact-active-class="active">Contact</NuxtLink></li>
         </ul>
       </nav>
@@ -39,8 +38,7 @@
         <li><NuxtLink to="/about" exact-active-class="active">À propos</NuxtLink></li>
         <li><NuxtLink to="/faculty" exact-active-class="active">Faculté</NuxtLink></li>
         <li><NuxtLink to="/staff" exact-active-class="active">Personnel</NuxtLink></li>
-        <li><NuxtLink to="/events" exact-active-class="active">Événements</NuxtLink></li>
-        <li><NuxtLink to="/campus-life" exact-active-class="active">Campus</NuxtLink></li>
+        <li><NuxtLink to="/campus" exact-active-class="active">Campus</NuxtLink></li>
         <li><NuxtLink to="/contact" exact-active-class="active">Contact</NuxtLink></li>
       </ul>
     </nav>
