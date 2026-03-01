@@ -15,11 +15,11 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: 'Institut Kamole - Excellence Académique & Internat',
+      title: 'Institut Kamole - Excellence Scolaire & Internat',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'Institut Kamole / Collège St François de Sales - Excellence académique depuis 1952 | Formation de qualité à Bukavu, RDC' },
+        { name: 'description', content: 'Institut Kamole / Collège St François de Sales - Excellence scolaire depuis 1952 | Formation de qualité à Bukavu, RDC' },
         { name: 'keywords', content: 'éducation, institut, académie, RDC, congo, bukavu, enseignement, internat, secondaire, collège' }
       ],
       link: [

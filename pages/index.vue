@@ -3,8 +3,8 @@
     <!-- Hero Section -->
     <Hero 
       title="Façonnons l'Avenir des Meilleurs Élèves"
-      subtitle="Collège prestigieux offrant une éducation d'excellence combinée à un cadre de vie stimulant. Développez vos talents académiques et personnels depuis 1952."
-      badge="Excellence Académique depuis 1952"
+      subtitle="Collège prestigieux offrant une éducation d'excellence combinée à un cadre de vie stimulant. Développez vos talents scolaires et personnels depuis 1952."
+      badge="Excellence Scolaire depuis 1952"
       background-image="/images/backgrounds/6.jpg"
     >
       <template #buttons>
@@ -26,7 +26,7 @@
           <div class="about-text">
             <span class="badge">Qui Sommes-Nous?</span>
             <h2>L'Excellence en Action depuis 72 Ans</h2>
-            <p>Institut Kamole / Collège St François de Sales est bien plus qu'une école. C'est une communauté dédiée à l'épanouissement académique et personnel de chaque élève. Depuis 1952, nous formons les leaders de demain en République Démocratique du Congo.</p>
+            <p>Institut Kamole / Collège St François de Sales est bien plus qu'une école. C'est une communauté dédiée à l'épanouissement scolaire et personnel de chaque élève. Depuis 1952, nous formons les leaders de demain en République Démocratique du Congo.</p>
             
             <div class="about-highlights">
               <div class="highlight">
@@ -39,7 +39,7 @@
               </div>
               <div class="highlight">
                 <h4>Encadrement Personnel</h4>
-                <p>Suivi individualisé pour chaque élève et sa trajectoire académique.</p>
+                <p>Suivi individualisé pour chaque élève et sa trajectoire scolaire.</p>
               </div>
             </div>
 
@@ -59,7 +59,7 @@
         <div class="section-header text-center">
           <span class="badge">Formations de Qualité</span>
           <h2>Nos Programmes & Formations</h2>
-          <p>Des cursus académiques complets et modernes, préparant les élèves aux enjeux du 21e siècle</p>
+          <p>Des cursus scolaires complets et modernes, préparant les élèves aux enjeux du 21e siècle</p>
         </div>
 
         <div class="programs-grid">

@@ -44,7 +44,7 @@ const props = withDefaults(defineProps<Props>(), {
   features: () => [
     {
       icon: 'trophy',
-      title: 'Excellence Académique',
+      title: 'Excellence Scolaire',
       description: 'Programmes pédagogiques modernes alignés sur les normes internationales.'
     },
     {

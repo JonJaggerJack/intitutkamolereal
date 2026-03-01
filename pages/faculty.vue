@@ -1,9 +1,9 @@
 <template>
   <main>
     <Hero 
-      title="Nos Facultés & Programmes"
-      subtitle="Explorez nos formations académiques professionnelles et modernes"
-      badge="Formations Académiques"
+      title="Nos Sections & Programmes"
+      subtitle="Explorez nos formations scolaires professionnelles et modernes"
+      badge="Formations Scolaires"
       background-image="/images/campus/6.jpg"
     >
       <template #buttons>
@@ -14,7 +14,7 @@
     <!-- Programs Overview -->
     <section class="programs-section">
       <div class="container">
-        <h2>Nos Programmes Académiques</h2>
+        <h2>Nos Programmes Scolaires</h2>
         <p class="section-description">Des programmes complets du primaire au secondaire</p>
         
         <div class="programs-grid">
@@ -96,14 +96,14 @@
           
           <div class="curriculum-item">
             <div class="curriculum-icon"><Icon name="trophy" size="large" color="var(--secondary)" /></div>
-            <h3>Excellence Académique</h3>
+            <h3>Excellence Scolaire</h3>
             <p>Préparation rigoureuse aux examens nationaux et internationaux.</p>
           </div>
           
           <div class="curriculum-item">
             <div class="curriculum-icon"><Icon name="users" size="large" color="var(--secondary)" /></div>
             <h3>Développement Holistique</h3>
-            <p>Formation académique, sportive, artistique et citoyenne.</p>
+            <p>Formation scolaire, sportive, artistique et citoyenne.</p>
           </div>
         </div>
       </div>
@@ -131,7 +131,7 @@
           <div class="stat-card">
             <div class="stat-number">15+</div>
             <div class="stat-label">Années</div>
-            <p>d'excellence académique</p>
+            <p>d'excellence scolaire</p>
           </div>
           
           <div class="stat-card">
@@ -170,8 +170,8 @@
 
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Facultés & Programmes - Institut Kamole',
-  description: 'Découvrez nos programmes académiques, départements et notre approche pédagogique d\'excellence.'
+  title: 'Sections & Programmes - Institut Kamole',
+  description: 'Découvrez nos programmes scolaires, départements et notre approche pédagogique d\'excellence.'
 })
 
 const programs = [
@@ -274,7 +274,7 @@ const admissionSteps = [
   },
   {
     title: 'Entretien',
-    description: 'Rencontre avec la direction académique pour discuter des objectifs et attentes.'
+    description: 'Rencontre avec la direction scolaire pour discuter des objectifs et attentes.'
   },
   {
     title: 'Confirmation',

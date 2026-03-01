@@ -107,7 +107,7 @@ const upcomingEvents = [
     id: 1,
     day: '25',
     month: 'FÉV',
-    category: 'Académique',
+    category: 'Scolaire',
     title: 'Portes Ouvertes 2026',
     description: 'Visitez notre campus, rencontrez nos professeurs et découvrez nos programmes.',
     time: '9h00 - 16h00',
@@ -137,7 +137,7 @@ const upcomingEvents = [
     id: 4,
     day: '10',
     month: 'AVR',
-    category: 'Académique',
+    category: 'Scolaire',
     title: 'Foire Scientifique',
     description: 'Présentation des projets scientifiques innovants de nos élèves.',
     time: '8h00 - 16h00',
@@ -204,7 +204,7 @@ const annualCalendar = [
   },
   {
     name: 'Mai',
-    events: ['Fête des mères', 'Compétitions académiques']
+    events: ['Fête des mères', 'Compétitions scolaires']
   },
   {
     name: 'Juin',
@@ -226,7 +226,7 @@ const recentNews = [
     title: 'Nouveau Partenariat International',
     date: '10 Février 2026',
     image: '/images/events/4.svg',
-    summary: 'Institut Kamole signe un accord de coopération avec une université canadienne pour des échanges académiques.'
+    summary: 'Institut Kamole signe un accord de coopération avec une université canadienne pour des échanges scolaires.'
   },
   {
     id: 2,

@@ -56,7 +56,7 @@
                 <span class="feature-icon"><Icon name="graduation" size="medium" color="var(--secondary)" /></span>
                 <div>
                   <h4>Études Surveillées</h4>
-                  <p>Encadrement et soutien académique tous les soirs</p>
+                  <p>Encadrement et soutien scolaire tous les soirs</p>
                 </div>
               </div>
               

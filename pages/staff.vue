@@ -141,7 +141,7 @@ const leadership = [
   {
     id: 2,
     name: 'Marie-Jeanne Joseph',
-    title: 'Directrice Académique',
+    title: 'Directrice Scolaire',
     image: '/images/direction/2.svg',
     bio: 'Spécialiste en curriculum et méthodes pédagogiques innovantes. Master en Pédagogie.',
     email: 'mj.joseph@institutkamole.edu'
@@ -190,7 +190,7 @@ const supportStaff = [
     icon: 'award',
     department: 'Administration',
     head: 'M. Patrick Noel',
-    description: 'Services administratifs et académiques',
+    description: 'Services administratifs et scolaires',
     services: [
       'Inscriptions et admissions',
       'Gestion des dossiers',

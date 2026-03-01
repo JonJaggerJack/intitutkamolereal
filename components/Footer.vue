@@ -5,7 +5,7 @@
         <!-- About -->
         <div class="footer-col">
           <img src="/images/logos/logo-white.png" alt="Institut Kamole" class="footer-logo">
-          <p>Excellence académique depuis 1952. Collège St François de Sales formant les leaders de demain.</p>
+          <p>Excellence scolaire depuis 1952. Collège St François de Sales formant les leaders de demain.</p>
           <div class="social-links">
             <a href="#" aria-label="Facebook">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
@@ -28,7 +28,7 @@
           <ul>
             <li><NuxtLink to="/">Accueil</NuxtLink></li>
             <li><NuxtLink to="/about">À propos</NuxtLink></li>
-            <li><NuxtLink to="/faculty">Faculté</NuxtLink></li>
+            <li><NuxtLink to="/faculty">Sections</NuxtLink></li>
             <li><NuxtLink to="/campus">Campus</NuxtLink></li>
           </ul>
         </div>

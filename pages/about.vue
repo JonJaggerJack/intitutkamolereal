@@ -179,7 +179,7 @@
           <div class="value-card">
             <div class="value-icon"><Icon name="star" size="large" color="var(--secondary)" /></div>
             <h3>Notre Vision</h3>
-            <p>Être l'institution éducative de référence reconnue pour son excellence académique, son encadrement personnalisé et son impact sociétal positif.</p>
+            <p>Être l'institution éducative de référence reconnue pour son excellence scolaire, son encadrement personnalisé et son impact sociétal positif.</p>
           </div>
 
           <div class="value-card">
@@ -287,7 +287,7 @@ const options = [
     id: 2,
     icon: 'graduation',
     title: 'Humanités Pédagogiques',
-    description: 'Formation des futurs enseignants avec excellence académique.'
+    description: 'Formation des futurs enseignants avec excellence scolaire.'
   },
   {
     id: 3,
