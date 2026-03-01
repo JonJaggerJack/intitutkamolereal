@@ -149,21 +149,21 @@ const pastEvents = [
     id: 1,
     title: 'Cérémonie de Remise des Diplômes 2025',
     date: 'Juillet 2025',
-    image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&h=500&fit=crop',
+    image: '/images/events/1.svg',
     description: 'Célébration de la réussite de nos 120 diplômés lors d\'une cérémonie mémorable.'
   },
   {
     id: 2,
     title: 'Journée Culturelle Congolaise',
     date: 'Janvier 2026',
-    image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=500&fit=crop',
+    image: '/images/events/2.svg',
     description: 'Célébration de notre patrimoine avec musique, danse et cuisine traditionnelle.'
   },
   {
     id: 3,
     title: 'Compétition de Robotique',
     date: 'Décembre 2025',
-    image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=500&fit=crop',
+    image: '/images/events/3.svg',
     description: 'Nos étudiants ont remporté le 2ème prix national de robotique.'
   }
 ]
@@ -224,21 +224,21 @@ const recentNews = [
     id: 1,
     title: 'Nouveau Partenariat International',
     date: '10 Février 2026',
-    image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=700&h=400&fit=crop',
+    image: '/images/events/4.svg',
     summary: 'Institut Kamole signe un accord de coopération avec une université canadienne pour des échanges académiques.'
   },
   {
     id: 2,
     title: 'Rénovation de la Bibliothèque',
     date: '5 Février 2026',
-    image: 'https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=700&h=400&fit=crop',
+    image: '/images/events/5.svg',
     summary: 'Notre bibliothèque a été entièrement rénovée avec 5000 nouveaux livres et des espaces numériques modernes.'
   },
   {
     id: 3,
     title: 'Succès aux Examens Nationaux',
     date: '1 Février 2026',
-    image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=700&h=400&fit=crop',
+    image: '/images/events/6.svg',
     summary: '98% de taux de réussite pour nos élèves aux examens d\'état - le meilleur score de la région!'
   }
 ]

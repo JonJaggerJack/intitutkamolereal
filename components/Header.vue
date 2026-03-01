@@ -2,10 +2,10 @@
   <header class="header">
     <div class="container header-container">
       <div class="logo">
-        <!-- Le logo sera ici - remplacez logo.svg par votre logo.png dans public/images/logos/ -->
+          <!-- Logo de l'Institut Kamole -->
         <NuxtLink to="/" class="logo-link">
           <img 
-            src="/images/logos/logo.svg" 
+            src="/images/logos/logo.jpg" 
             alt="Institut Kamole Logo" 
             class="logo-image"
           >

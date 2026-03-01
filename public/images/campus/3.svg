@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
+  <rect width="600" height="400" fill="#253C56"/>
+  <rect x="100" y="100" width="400" height="220" rx="8" fill="#4684CB" opacity="0.4"/>
+  <text x="300" y="370" font-family="sans-serif" font-size="22" fill="white" text-anchor="middle" opacity="0.7">Photo Campus 3</text>
+</svg>

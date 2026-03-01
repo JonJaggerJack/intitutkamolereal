@@ -1,129 +1,97 @@
-# Guide d'utilisation des images
+# Guide des images — Institut Kamole
 
 ## Structure des dossiers
 
 ```
 public/images/
-├── backgrounds/     # Images de fond pour les sections
-├── logos/          # Logos de l'institut
-└── README.md       # Ce fichier
+├── backgrounds/      # Images de fond pour les sections (composant Section.vue)
+├── logos/            # Logo de l'institut
+├── direction/        # Photos de l'équipe de direction
+├── enseignants/      # Photos des enseignants
+├── campus/           # Photos des installations et bâtiments
+└── README.md         # Ce fichier
 ```
 
-## Comment ajouter des images de fond
+---
 
-### 1. Placer vos images
-- Ajoutez vos images dans `public/images/backgrounds/`
-- Formats recommandés : JPG, PNG, WebP
-- Taille recommandée : 1920x1080px ou plus pour la qualité
+## `backgrounds/`
+Images de fond utilisées via le composant `Section.vue`.
 
-### 2. Utiliser le composant Section
+Taille recommandée : **1920×1080px** minimum, format JPG ou WebP.
 
-#### Exemple basique avec image de fond
+Exemples de noms :
+- `hero-home.jpg`
+- `about-history.jpg`
+- `campus-aerial.jpg`
+
+Utilisation :
 ```vue
-<Section background-image="hero-bg.jpg">
-  <h2>Titre de la section</h2>
-  <p>Contenu de la section</p>
+<Section background-image="hero-home.jpg" overlay="dark">
+  ...
 </Section>
 ```
 
-#### Exemple avec overlay sombre
-```vue
-<Section 
-  background-image="campus.jpg"
-  overlay="dark"
->
-  <h2>Notre Campus</h2>
-  <p>Découvrez nos installations</p>
-</Section>
+---
+
+## `logos/`
+- `logo.svg` — Logo principal (utilisé dans le Header)
+- `logo-white.svg` — Version blanche pour fonds sombres
+
+---
+
+## `direction/`
+Photos de l'équipe de **Direction & Administration** (page Personnel).
+
+Taille recommandée : **400×400px**, format JPG.
+
+| Fichier | Description |
+|---|---|
+| `directeur.jpg` | Photo du Directeur |
+| `prefet.jpg` | Photo du Préfet des études |
+| `econome.jpg` | Photo de l'Économe |
+
+Utilisation dans `pages/staff.vue` :
+```js
+image: '/images/direction/directeur.jpg'
 ```
 
-#### Exemple avec overlay clair
-```vue
-<Section 
-  background-image="students.jpg"
-  overlay="light"
->
-  <h2>Nos Étudiants</h2>
-  <p>Excellence académique</p>
-</Section>
+---
+
+## `enseignants/`
+Photos des **enseignants par département** (page Personnel).
+
+Taille recommandée : **300×300px**, format JPG.
+
+| Fichier | Description |
+|---|---|
+| `prof-sciences-1.jpg` | Professeur Sciences |
+| `prof-sciences-2.jpg` | Professeur Sciences |
+| `prof-lettres-1.jpg` | Professeur Lettres |
+| `prof-langues-1.jpg` | Professeur Langues |
+| `prof-arts-1.jpg` | Professeur Arts |
+
+Utilisation dans `pages/staff.vue` :
+```js
+image: '/images/enseignants/prof-sciences-1.jpg'
 ```
 
-#### Exemple avec effet parallaxe
-```vue
-<Section 
-  background-image="building.jpg"
-  overlay="primary"
-  :parallax="true"
-  padding="large"
->
-  <h2>Notre Histoire</h2>
-  <p>Depuis 1952</p>
-</Section>
+---
+
+## `campus/`
+Photos des **installations et bâtiments** (pages À propos, Campus).
+
+Taille recommandée : **800×600px**, format JPG.
+
+| Fichier | Description |
+|---|---|
+| `internat.jpg` | Vue de l'internat |
+| `batiment-principal.jpg` | Bâtiment principal |
+| `labo.jpg` | Laboratoire |
+| `bibliotheque.jpg` | Bibliothèque |
+| `terrain-sport.jpg` | Terrain de sport |
+| `salle-classe.jpg` | Salle de classe |
+
+Utilisation dans `pages/about.vue` et `pages/campus-life.vue` :
+```html
+<img src="/images/campus/internat.jpg" alt="Internat">
 ```
-
-### 3. Options disponibles
-
-#### background-image
-- Nom du fichier dans `public/images/backgrounds/`
-- Ou URL complète (ex: "https://example.com/image.jpg")
-
-#### overlay
-- `none` - Pas d'overlay (défaut)
-- `light` - Overlay blanc transparent
-- `dark` - Overlay noir transparent
-- `primary` - Overlay couleur primaire (#253C56)
-- `secondary` - Overlay couleur secondaire (#4684CB)
-
-#### parallax
-- `true` - Active l'effet parallaxe
-- `false` - Désactivé (défaut)
-
-#### padding
-- `small` - 3rem (mobile: 2rem)
-- `medium` - 5rem (mobile: 3rem) - défaut
-- `large` - 7rem (mobile: 4rem)
-
-#### customClass
-- Ajouter des classes CSS personnalisées
-
-### 4. Utiliser des classes CSS directement
-
-Si vous préférez ne pas utiliser le composant Section :
-
-```vue
-<section 
-  class="section-bg-overlay section-bg-overlay-dark" 
-  style="background-image: url('/images/backgrounds/hero.jpg')"
->
-  <div class="container">
-    <!-- Contenu -->
-  </div>
-</section>
-```
-
-#### Classes disponibles
-- `.section-bg` - Image de fond simple
-- `.section-bg-overlay` - Image avec overlay
-- `.section-bg-overlay-light` - Overlay blanc
-- `.section-bg-overlay-dark` - Overlay noir
-- `.section-bg-overlay-primary` - Overlay couleur primaire
-- `.section-bg-overlay-secondary` - Overlay couleur secondaire
-- `.section-bg-parallax` - Effet parallaxe
-
-## Exemples de noms de fichiers suggérés
-
-- `hero-home.jpg` - Image hero de la page d'accueil
-- `about-history.jpg` - Section histoire (À propos)
-- `campus-aerial.jpg` - Vue aérienne du campus
-- `students-class.jpg` - Étudiants en classe
-- `library.jpg` - Bibliothèque
-- `sports-field.jpg` - Terrain de sport
-- `graduation.jpg` - Cérémonie de graduation
-- `faculty-team.jpg` - Équipe des professeurs
-
-## Logo
-
-Placez le logo de l'institut dans `public/images/logos/` :
-- `logo.png` - Logo principal
-- `logo-white.png` - Logo en blanc (pour fonds sombres)
-- `favicon.ico` - Favicon du site

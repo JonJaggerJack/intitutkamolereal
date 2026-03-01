@@ -71,7 +71,7 @@
           </div>
           
           <div class="internat-image">
-            <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&h=600&fit=crop" alt="Internat">
+            <img src="/images/campus/1.jpg" alt="Internat">
           </div>
         </div>
       </div>
@@ -170,25 +170,25 @@ const activities = [
   {
     id: 1,
     title: 'Clubs Académiques',
-    image: 'https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=600&h=400&fit=crop',
+    image: '/images/campus/3.jpg',
     description: 'Club de mathématiques, sciences, débat et langues pour approfondir vos connaissances.'
   },
   {
     id: 2,
     title: 'Sports & Athlétisme',
-    image: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=600&h=400&fit=crop',
+    image: '/images/campus/4.jpg',
     description: 'Équipes de football, basketball, volleyball et athlétisme.'
   },
   {
     id: 3,
     title: 'Arts & Culture',
-    image: 'https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=600&h=400&fit=crop',
+    image: '/images/campus/5.jpg',
     description: 'Chorale, théâtre, peinture et danse pour exprimer votre créativité.'
   },
   {
     id: 4,
     title: 'Service Communautaire',
-    image: 'https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600&h=400&fit=crop',
+    image: '/images/campus/6.jpg',
     description: 'Programmes de bénévolat et projets communautaires pour développer la citoyenneté.'
   }
 ]

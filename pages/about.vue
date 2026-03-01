@@ -109,7 +109,7 @@
       <div class="container">
         <div class="internat-content">
           <div class="internat-image">
-            <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&h=600&fit=crop" alt="Internat">
+            <img src="/images/campus/1.jpg" alt="Internat">
           </div>
           <div class="internat-text">
             <h2>L'Internat</h2>
@@ -199,7 +199,7 @@
         <div class="team-grid">
           <div class="team-card">
             <div class="team-image">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" alt="Recteur">
+              <img src="/images/direction/1.svg" alt="Recteur">
             </div>
             <h3>Abbé BURUME BISHIKWABO Rodrigue</h3>
             <p class="team-role">Recteur</p>

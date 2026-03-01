@@ -151,7 +151,7 @@ const leadership = [
     id: 1,
     name: 'Dr. Jean-Claude Pierre',
     title: 'Directeur Général',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
+    image: '/images/direction/1.svg',
     bio: 'Plus de 20 ans d\'expérience en gestion éducative. Docteur en Sciences de l\'Éducation.',
     email: 'jc.pierre@institutkamole.edu'
   },
@@ -159,7 +159,7 @@ const leadership = [
     id: 2,
     name: 'Marie-Jeanne Joseph',
     title: 'Directrice Académique',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop',
+    image: '/images/direction/2.svg',
     bio: 'Spécialiste en curriculum et méthodes pédagogiques innovantes. Master en Pédagogie.',
     email: 'mj.joseph@institutkamole.edu'
   },
@@ -167,7 +167,7 @@ const leadership = [
     id: 3,
     name: 'Pierre-Louis Beauvoir',
     title: 'Directeur Administratif',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop',
+    image: '/images/direction/3.svg',
     bio: 'Expert en gestion administrative et financière des institutions éducatives.',
     email: 'pl.beauvoir@institutkamole.edu'
   }
@@ -190,7 +190,7 @@ const teachers = [
     specialization: 'Docteur',
     credentials: 'Doctorat en Chimie Organique',
     experience: '15 ans d\'enseignement',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop'
+    image: '/images/enseignants/1.jpg'
   },
   {
     id: 2,
@@ -200,7 +200,7 @@ const teachers = [
     specialization: 'Professeur',
     credentials: 'Master en Mathématiques Appliquées',
     experience: '12 ans d\'expérience',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop'
+    image: '/images/enseignants/2.jpg'
   },
   {
     id: 3,
@@ -210,7 +210,7 @@ const teachers = [
     specialization: 'Professeur',
     credentials: 'Licence en Biologie Moléculaire',
     experience: '8 ans d\'enseignement',
-    image: 'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=300&h=300&fit=crop'
+    image: '/images/enseignants/3.jpg'
   },
   // Lettres
   {
@@ -221,7 +221,7 @@ const teachers = [
     specialization: 'Professeur',
     credentials: 'Master en Lettres Modernes',
     experience: '18 ans d\'expérience',
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=300&fit=crop'
+    image: '/images/enseignants/4.jpg'
   },
   {
     id: 5,
@@ -231,7 +231,7 @@ const teachers = [
     specialization: 'Professeur',
     credentials: 'Master TESOL - Native Speaker',
     experience: '10 ans d\'enseignement',
-    image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=300&h=300&fit=crop'
+    image: '/images/enseignants/5.svg'
   },
   {
     id: 6,
@@ -241,7 +241,7 @@ const teachers = [
     specialization: 'Professeur',
     credentials: 'Licence en Langues Romanes',
     experience: '7 ans d\'expérience',
-    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=300&h=300&fit=crop'
+    image: '/images/enseignants/6.svg'
   },
   // Sciences Humaines
   {
@@ -252,7 +252,7 @@ const teachers = [
     specialization: 'Professeur',
     credentials: 'Master en Histoire Contemporaine',
     experience: '14 ans d\'enseignement',
-    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=300&fit=crop'
+    image: '/images/enseignants/7.svg'
   },
   {
     id: 8,
@@ -262,7 +262,7 @@ const teachers = [
     specialization: 'Professeur',
     credentials: 'Licence en Sociologie',
     experience: '9 ans d\'expérience',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop'
+    image: '/images/enseignants/8.svg'
   },
   // Arts & Sports
   {
@@ -273,7 +273,7 @@ const teachers = [
     specialization: 'Professeur',
     credentials: 'Master en Beaux-Arts',
     experience: '11 ans d\'enseignement',
-    image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&h=300&fit=crop'
+    image: '/images/enseignants/9.svg'
   },
   {
     id: 10,
@@ -283,7 +283,7 @@ const teachers = [
     specialization: 'Coach',
     credentials: 'Diplôme STAPS - Ex-athlète national',
     experience: '13 ans d\'expérience',
-    image: 'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=300&h=300&fit=crop'
+    image: '/images/enseignants/10.svg'
   }
 ]
 
